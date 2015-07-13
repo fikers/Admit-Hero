@@ -45,5 +45,9 @@ class UserTest < ActiveSupport::TestCase
     	@user.password = @user.password_confirmation = "12345"
     	assert_not @user.valid?
     end
+
+    test"should return false when authenticate? if digest is nil" do
+    	assert_not @user.authenticated?('')
+    end
 end
  

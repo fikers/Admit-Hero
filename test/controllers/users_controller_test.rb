@@ -12,4 +12,9 @@ class UsersControllerTest < ActionController::TestCase
     	assert_select "title", "Sign up | #{@base_title}"
   	end
 
+  	test "index action redirect without login" do
+  		get :index
+  		assert_redirected_to login_url
+  	end
+
 end
