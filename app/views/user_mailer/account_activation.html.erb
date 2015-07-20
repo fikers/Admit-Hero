@@ -1,0 +1,10 @@
+<h1>AdmitHero Account Activation</h1>
+
+<p>Hi <%= @user.name %>,</p>
+
+<p>
+Welcome to AdmitHero, please click the link below to finish the account activation:
+</p>
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token, 
+														email: @user.email) %>
+
