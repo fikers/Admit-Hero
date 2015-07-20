@@ -1,2 +1,2 @@
-# admithero
+# Admit Hero
 Admit Hero
