@@ -1,4 +1,4 @@
 #Admit Hero
-#This is the first version the back of AdmitHero webapp
-#first time edit
+#This is the first version of AdmitHero webapp
+
 
