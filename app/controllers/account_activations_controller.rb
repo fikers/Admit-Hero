@@ -14,3 +14,5 @@ class AccountActivationsController < ApplicationController
 	end
 
 end 
+
+//test comment
