@@ -18,11 +18,8 @@ html {
 }
 
 body {
-<<<<<<< HEAD
   margin: 0;
-=======
-	padding-top: 60px;
->>>>>>> more-divs
+	padding: 0;
 }
 
 section {
@@ -33,12 +30,12 @@ textarea {
 	resize: vertical;
 }
 
-.center {
-	text-align: center;
-	h1 { 
-		margin-bottom: 10px;
-	}
-}
+// .center {
+// 	text-align: center;
+// 	h1 { 
+// 		margin-bottom: 10px;
+// 	}
+// }
 
 #mouse {
   background: url('pencil.jpg') center / cover;
