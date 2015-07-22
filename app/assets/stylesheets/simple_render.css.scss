@@ -40,8 +40,26 @@ textarea {
 #mouse {
   background: url('../assets/pencil.jpg') center / cover;
   height: 400px;
-  width: 100%;
-  position: relative;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
 }
 
 .center-title {
