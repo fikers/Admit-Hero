@@ -84,6 +84,7 @@ textarea {
   margin: auto;
   @include order(2);
   align-self: center;
+  opacity: 1.5;
 
   // @include flexbox();
   // flex-direction: row;
