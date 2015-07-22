@@ -27,18 +27,30 @@
     
 
 
+.jumbotron {
+    margin-bottom: 0px;
+}
+
+
+.layout-transparent {
+  //background: url('../assets/demos/transparent.jpg') center / cover;
+}
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+
+
 .mdl-layout__header {
     position: fixed;
-    top: 0px;
-    left-margin:100px;
+    height:30px;
 }
 
 .custom {
-    //max-width:1200px;
+    max-width:1200px;
     margin-left:auto;
     margin-right:auto;
 }
 
-.jumbotron {
-    margin-bottom: 0px;
-}
