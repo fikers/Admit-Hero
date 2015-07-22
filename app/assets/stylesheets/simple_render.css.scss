@@ -37,36 +37,71 @@ textarea {
 // 	}
 // }
 
-#mouse {
-  background: url('../assets/pencil.jpg') center / cover;
-  height: 400px;
-
+@mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;
-  display: box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
 
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
 
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
 
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
+#mouse {
+  background: url('../assets/book.jpg') center / cover;
+  height: 500px;
 
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
+  @include flexbox();
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-center;
+  align-content: center;
+  padding: 100px;
 }
 
 .center-title {
-  vertical-align: middle;
-  margin: 0 auto;
-  width: 50%;
+  margin: auto;
+  width: 100%;
+  @include order(1);
+  margin: 10px;
 }
+
+.sign-in {
+  margin: auto;
+  @include order(2);
+  align-self: center;
+
+  // @include flexbox();
+  // flex-direction: row;
+  // justify-content: flex-center;
+  margin: 10px;
+  overflow: auto;
+}
+
+.input-field {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#about {
+  background-color: gray;
+  height: 500px;
+}
+
 
 /* typography */
 
