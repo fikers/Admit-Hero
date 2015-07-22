@@ -1,18 +1,6 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#car {
-    background-image: url(../assets/prince-5.jpeg);
-    background-size: cover;
-    height: 500px;
-}
-
-#car2 {
-    background-image: url('../assets/krzysztof-70.jpg');
-    background-size: cover;
-    height: 500px;
-}
-
 .demo-card-wide.mdl-card {
     width: 512px;
 }
@@ -24,29 +12,6 @@
 .demo-card-wide > .mdl-card__menu {
     color: #fff;
 }
-    
-
-
-.jumbotron {
-    margin-bottom: 0px;
-}
-
-
-.layout-transparent {
-  //background: url('../assets/demos/transparent.jpg') center / cover;
-}
-.layout-transparent .mdl-layout__header,
-.layout-transparent .mdl-layout__drawer-button {
-  /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */
-  color: white;
-}
-
-
-.mdl-layout__header {
-    position: fixed;
-    height:30px;
-}
 
 .custom {
     max-width:1200px;
@@ -54,4 +19,30 @@
     margin-right:auto;
 }
 
+// test
+
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+
+body {
+    margin:0; padding: 0;
+}
+
+
+.custom2 {
+    position: fixed;
+    display: none;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    padding: 20px;
+    //background: blue;
+}
 
