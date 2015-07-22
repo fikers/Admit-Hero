@@ -5,16 +5,24 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 	<% flash.each do |message_type, message| %>
 		<div class="alert alert-<%= message_type %>"><%= message %></div>
 	<% end %>
 	<%= render 'layouts/header' %>
-	<div class="container">
-		<%= yield %>
+	
+	<main class="custom">
+    <div class="page-content">
+    <%= yield %>
 		<%= render 'layouts/footer' %>
 		<%= debug(params) if Rails.env.development? %>
-	</div>
+		</div>
+  </main>
+
 </body>
 </html>
