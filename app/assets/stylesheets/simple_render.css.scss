@@ -19,6 +19,7 @@ html {
 
 body {
 	padding-top: 60px;
+  margin: 0;
 }
 
 section {
@@ -34,6 +35,12 @@ textarea {
 	h1 { 
 		margin-bottom: 10px;
 	}
+}
+
+#mouse {
+  background: url('pencil.jpg') center / cover;
+  height: 400px;
+  vertical-align: middle;
 }
 
 
