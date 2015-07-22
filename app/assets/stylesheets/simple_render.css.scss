@@ -40,9 +40,14 @@ textarea {
 #mouse {
   background: url('../assets/pencil.jpg') center / cover;
   height: 400px;
-  margin: 0;
   width: 100%;
-  padding: 0;
+  position: relative;
+}
+
+.center-title {
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 50%;
 }
 
 /* typography */
