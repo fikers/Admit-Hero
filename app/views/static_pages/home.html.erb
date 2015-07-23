@@ -21,135 +21,39 @@
 	<div class="center-title">
 		<h1 class="title">Welcome to Admit Hero</h1>
 	</div>
-</div>
 
-<div style="min-height:200px">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3 sign-up-form">
     <%= form_for(@user) do |f| %>
     	<%= render 'shared/error_messages' %>
     	
-			<div class="mdl-textfield mdl-js-textfield textfield-demo">
+			<div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
       	<%= f.label :name, class: 'mdl-textfield__label' %>
       	<%= f.text_field :name, class: 'mdl-textfield__input' %>
       </div>
 
-      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+      <div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
       	<%= f.label :email, class: 'mdl-textfield__label' %>
       	<%= f.email_field :email, class: 'mdl-textfield__input' %>
       </div>
 
-      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+      <div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
       	<%= f.label :password, class: 'mdl-textfield__label' %>
       	<%= f.password_field :password, class: 'mdl-textfield__input' %>
       </div>
 
-      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+      <div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
       	<%= f.label :password_confirmation, class: 'mdl-textfield__label' %>
       	<%= f.password_field :password_confirmation, class: 'mdl-textfield__input' %>
       </div>
 
-      	<%= f.submit "Create my account", class: "btn btn-primary" %>
+      	<%= f.submit "Create my account", class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-button" %>
     <% end %>
-  </div>
+  
+</div>
 </div>
 
-
-<!-- </div> -->
-
-<!-- <div class="mdl-card mdl-shadow--2dp demo-card-wide">
->>>>>>> 473b7e60fed57cf9fc52be556a4d4665ef8ecca8
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Welcome</h2>
-  </div>
-  <div class="mdl-card__supporting-text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris sagittis pellentesque lacus eleifend lacinia...
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
-    </a>
-  </div>
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
-  </div>
-</div> -->
-
-<!--<form action="#">-->
-<!--  <div class="mdl-textfield mdl-js-textfield textfield-demo">-->
-<!--    <input class="mdl-textfield__input" type="text" id="sample1" />-->
-<!--    <label class="mdl-textfield__label" for="sample1">Text...</label>-->
-<!--  </div>-->
-<!--</form>-->
-
-<!--<div>-->
-<!--  <div class="col-md-6 col-md-offset-3">-->
-<!--    <%= form_for(@user) do |f| %>-->
-<!--    	<%= render 'shared/error_messages' %>-->
-    	
-<!--			<div class="mdl-textfield mdl-js-textfield textfield-demo">-->
-<!--      	<%= f.label :name, class: 'mdl-textfield__label' %>-->
-<!--      	<%= f.text_field :name, class: 'mdl-textfield__input' %>-->
-<!--      </div>-->
-
-<!--      <div class="mdl-textfield mdl-js-textfield textfield-demo">-->
-<!--      	<%= f.label :email, class: 'mdl-textfield__label' %>-->
-<!--      	<%= f.text_field :email, class: 'mdl-textfield__input' %>-->
-<!--      </div>-->
-
-<!--      <div class="mdl-textfield mdl-js-textfield textfield-demo">-->
-<!--      	<%= f.label :password, class: 'mdl-textfield__label' %>-->
-<!--      	<%= f.text_field :password, class: 'mdl-textfield__input' %>-->
-<!--      </div>-->
-
-<!--      <div class="mdl-textfield mdl-js-textfield textfield-demo">-->
-<!--      	<%= f.label :password_confirmation, class: 'mdl-textfield__label' %>-->
-<!--      	<%= f.text_field :password_confirmation, class: 'mdl-textfield__input' %>-->
-<!--      </div>-->
-
-<!--      	<%= f.submit "Create my account", class: "btn btn-primary" %>-->
-<!--    <% end %>-->
-<!--  </div>-->
-<!--</div>-->
-
-<!--<div class="mdl-textfield mdl-js-textfield sign-in">-->
-<!--	<div class="input-field">-->
-<!--		<input class="mdl-textfield__input" type="text", placeholder="firstname lastname", id="name" />-->
-<!--		<label for="email">Name</label>-->
-<!--	</div>-->
-<!--	<div class="input-field">-->
-<!--		<input class="mdl-textfield__input" type="email", placeholder="example@admithero.com", id="email" />-->
-<!--		<label for="password">Email</label>-->
-<!--	</div>-->
-<!--	<div class="input-field">-->
-<!--		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">-->
-<!--			Sign up!-->
-<!--		</button>-->
-<!--	</div>-->
-<!--</div>-->
-
-<!-- <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-	<div class="mdl-tabs__tab-bar">
-		<a href="#tab1" class="mdl-tabs__tab">Scholarships</a>
-		<a href="#tab2" class="mdl-tabs__tab">Videos</a>
-		<a href="#tab3" class="mdl-tabs__tab">Articles</a>
-	</div>
-	<div class="mdl-tabs__panel is-active" id="tab1">
-		<div class="no-hover">
-			<img src="pencil.jpg" alt="Find scholarships"/>
-		</div>
-		<div class="on-hover">
-			<p>Find scholarships for college</p>
-		</div>
-	</div>
-	<div class="mdl-tabs__panel" id="tab2">
-		<p>Hear from students</p>
-	</div>
-	<div class="mdl-tabs__panel" id="tab3">
-		<p>Learn about colleges</p>
-	</div>
-</div> -->
+<div class="testimonials">
+	slideshow thingy here?
+</div>
 
 
