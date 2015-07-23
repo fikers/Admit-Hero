@@ -11,32 +11,6 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
-/* universal */
-
-html {
-	overflow-y: scroll;
-}
-
-body {
-  margin: 0;
-	padding: 0;
-}
-
-section {
-    overflow: auto;
-}
-
-textarea {
-	resize: vertical;
-}
-
-// .center {
-// 	text-align: center;
-// 	h1 { 
-// 		margin-bottom: 10px;
-// 	}
-// }
-
 @mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;
@@ -60,6 +34,29 @@ textarea {
   -webkit-order: $val;  
   order: $val;
 }
+
+/* universal */
+
+@media (max-width: 600px), handheld {
+  .title {
+    font-size: 30px;
+    color: white;
+  }
+}
+
+html {
+	overflow-y: scroll;
+}
+
+
+section {
+    overflow: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
 
 #mouse {
   background: url('../assets/book.jpg') center / cover;
@@ -114,6 +111,56 @@ textarea {
   background-color: gray;
 }
 
+.grid {
+  @include flexbox();
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  align-content: flex-start;
+
+  .grid-cell {
+    width: 50%;
+    height: 300px;
+    text-align: center;
+    display: table;
+  }
+
+  .grid-text {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .cell1 {
+    background: url('../assets/pencil.jpg') center / cover;
+  }
+  .cell2 {
+    background: url('../assets/pisa.jpg') center / cover;
+  }
+  .cell3 {
+    background: url('../assets/typing.jpg') center / cover;
+  }
+  .cell4 {
+    background: url('../assets/bridge.jpg') center / cover;
+  }
+}
+
+.logos {
+  height: 500px;
+  background-color: #2196f3;
+  display: inline-block;
+  width: 100%;
+  .logos-text {
+    color: #212121;
+  }
+}
+
+.stuff {
+  height: 500px;
+  background-color: #bbdefb;
+  display: inline-block;
+  width: 100%;
+}
 
 /* typography */
 
