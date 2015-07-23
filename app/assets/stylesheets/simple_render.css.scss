@@ -39,8 +39,31 @@ $gray-medium-light: #eaeaea;
 
 @media (max-width: 600px), handheld {
   .title {
-    font-size: 30px;
+    font-size: 36px;
     color: white;
+  }
+  #mouse {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+
+    .sign-up-form {
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      .user-text {
+        width: 100%;
+      }
+
+      .create-button {
+        width: 100%; 
+      }
+    }
   }
 }
 
@@ -69,13 +92,6 @@ textarea {
   align-content: center;
   align-items: center;
   padding: 100px;
-}
-
-.center-title {
-  margin: auto;
-  width: 100%;
-  @include order(1);
-  margin: 10px;
 }
 
 .sign-up-form {
