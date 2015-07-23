@@ -66,7 +66,7 @@ textarea {
   height: 500px;
 
   @include flexbox();
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-center;
   align-content: center;
