@@ -68,8 +68,9 @@ textarea {
   @include flexbox();
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-center;
+  justify-content: space-around;
   align-content: center;
+  align-items: center;
   padding: 100px;
 }
 
@@ -80,26 +81,37 @@ textarea {
   margin: 10px;
 }
 
-.sign-in {
-  margin: auto;
+.sign-up-form {
   @include order(2);
-  align-self: center;
 
-  // @include flexbox();
-  // flex-direction: row;
-  // justify-content: flex-center;
-  margin: 10px;
-  overflow: auto;
+  @include flexbox();
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  align-content: flex-start;
+
+  margin: auto;
+  width: 75%;
 }
 
-.input-field {
-  display: inline-block;
-  vertical-align: top;
+.user-text {
+  @include order(0);
+  width: 45%;
+}
+
+.create-button {
+  width: 30%;
 }
 
 #about {
   background-color: gray;
   height: 500px;
+}
+
+.testimonials {
+  height: 400px;
+  background-color: gray;
 }
 
 
