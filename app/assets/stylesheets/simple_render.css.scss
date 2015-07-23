@@ -91,7 +91,7 @@ textarea {
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  padding: 100px;
+  //padding: 100px;
 }
 
 .sign-up-form {
@@ -99,22 +99,24 @@ textarea {
 
   @include flexbox();
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: baseline;
   align-content: flex-start;
 
   margin: auto;
   width: 75%;
-}
 
-.user-text {
-  @include order(0);
-  width: 45%;
-}
+  .user-text {
+    @include order(0);
+    width: 45%;
+  }
 
-.create-button {
-  width: 30%;
+  .create-button {
+    width: 100%;
+    align-self: center;
+  }
+
 }
 
 #about {
