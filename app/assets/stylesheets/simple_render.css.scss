@@ -42,27 +42,16 @@ $gray-medium-light: #eaeaea;
     font-size: 36px;
     color: white;
   }
+
   #mouse {
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
 
     .sign-up-form {
-      width: 100%;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      align-content: center;
-      align-items: center;
-      margin: 0;
-      padding: 0;
+      width: 100vw;
 
       .user-text {
-        width: 100%;
+        width: 100vw;
       }
 
-      .create-button {
-        width: 100%; 
-      }
     }
   }
 }
@@ -82,13 +71,16 @@ textarea {
 
 
 #mouse {
+
   background: url('https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/prince-5.jpeg') center / cover;
   height: 100vh;
+  width: 100vw;
 
   @include flexbox();
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  -webkit-justify-content: center;
   align-content: center;
   align-items: center;
   //padding: 100px;
@@ -97,36 +89,31 @@ textarea {
     background-color: white;
     opacity: .70;
     width: 100vw;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
     h1 {
       color: #1976d2;
     }
   }
+
+  .sign-up-form {
+    //background-color: white;
+    width: 85%;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+
+    .user-text {
+      width: 50%;
+    }
+  }
 }
 
-.sign-up-form {
-  @include order(2);
 
-  @include flexbox();
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: baseline;
-  align-content: flex-start;
-
-  margin: auto;
-  width: 75%;
-
-  .user-text {
-    @include order(0);
-    width: 45%;
-  }
-
-  .create-button {
-    width: 100%;
-    align-self: center;
-  }
-
-}
 
 #about {
   background-color: gray;
@@ -134,8 +121,32 @@ textarea {
 }
 
 .testimonials {
-  height: 400px;
-  background-color: gray;
+  height: 95vh;
+  background-color: white;
+  @include flexbox();
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 2% 5%;
+
+  .heading {
+    width: 100vw;
+  }
+
+  .picture {
+    width: 50vw;
+    height: 50vh;
+    background: url(../assets/how-to.png) center / cover;
+  }
+
+  .text {
+    flex-grow: 1;
+    width: 33vw;
+    padding-left: 5%;
+    word-break: break-all;
+  }
 }
 
 .grid {
