@@ -1,0 +1,15 @@
+<%= provide(:title , "Profile") %>
+
+<aside>
+<%= render 'users/profile_side' %>
+</aside>
+
+<h1>Basic Information</h1>
+
+<p>	
+	<%= @user.name %> <br>
+	<%= @user.email %> <br>
+	birthday <br>
+	gender <br>
+	school
+</p>

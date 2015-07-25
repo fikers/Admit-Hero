@@ -1,0 +1,45 @@
+<%= provide(:title , "Profile") %>
+
+<aside>
+<%= render 'users/profile_side' %>
+</aside>
+
+<h1>Tags</h1>
+	
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+		<%= form_for @tags, url: tags_user_path do |f| %>
+			<%= f.label :summer_programs, "Summer Programs" %>
+			<%= f.check_box :summer_programs %>
+
+			<%= f.label :scholarships, "Scholarships" %>
+			<%= f.check_box :scholarships %>
+
+			<%= f.label :stem, "STEM" %>
+			<%= f.check_box :stem %>
+
+			<%= f.label :humanities, "Humanities" %>
+			<%= f.check_box :humanities %>
+
+			<%= f.label :computer_science, "Computer Science" %>
+			<%= f.check_box :computer_science %>
+
+			<%= f.label :traveling, "Traveling" %>
+			<%= f.check_box :traveling %>
+
+			<%= f.label :community_service, "Community Service" %>
+			<%= f.check_box :community_service %>
+
+			<%= f.label :research, "Research" %>
+			<%= f.check_box :research %>
+
+			<%= f.label :internships, "Internships" %>
+			<%= f.check_box :internships %>
+
+			<%= f.label :arts, "Arts" %>
+			<%= f.check_box :arts %>
+		<% end %>
+	</div>
+</div>
+
+

@@ -11,7 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716201916) do
+ActiveRecord::Schema.define(version: 20150724193250) do
+
+  create_table "basic_infos", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "birthday"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "basic_infos", ["user_id"], name: "index_basic_infos_on_user_id"
+
+  create_table "tags", force: :cascade do |t|
+    t.integer  "user_id"
+    t.boolean  "summer_programs",   default: false
+    t.boolean  "scholarships",      default: false
+    t.boolean  "stem",              default: false
+    t.boolean  "humanities",        default: false
+    t.boolean  "computer_science",  default: false
+    t.boolean  "traveling",         default: false
+    t.boolean  "community_service", default: false
+    t.boolean  "research",          default: false
+    t.boolean  "internships",       default: false
+    t.boolean  "arts",              default: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+  end
+
+  add_index "tags", ["user_id"], name: "index_tags_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
