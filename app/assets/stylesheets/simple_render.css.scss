@@ -64,6 +64,8 @@ textarea {
 #mouse {
   background: url('../assets/book.jpg') center / cover;
   height: 500px;
+  
+  
 
   @include flexbox();
   flex-direction: row;

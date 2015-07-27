@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   			flash[:info] = "Please check your mailbox to finish the account activation"
   			redirect_to root_url
   		else
-  			redirect_to root_url
+  			render 'new'
   		end
   	end
 

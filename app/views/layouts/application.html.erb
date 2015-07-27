@@ -19,7 +19,14 @@
 	
 	<main>
     <div class="page-content">
-    <%= yield %>
+    	
+    <% if !logged_in? && current_page?(root_url) %>
+    <div class="one"><%= yield %></div>
+    <% else %>
+    <div class="two"><%= yield %></div>
+    <% end %>
+    
+    
 		<%= render 'layouts/footer' %>
 		<%= debug(params) if Rails.env.development? %>
 		</div>
