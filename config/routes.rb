@@ -12,16 +12,14 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'sessions#destroy' 
 
-  resources :users, except: [:edit, :update] do 
+  resources :users do 
     member do
-      get 'basic_info' 
+      get :basic_info, :tags
       #basic_info_user_path or basic_info_user_url
-      get 'tags' 
       #tags_user_path or tags_user_url
-      patch 'update_tags'
+      patch :update_tags
     end
-    
-  end
+  end 
 
   resources :account_activations, only: [:edit]
 

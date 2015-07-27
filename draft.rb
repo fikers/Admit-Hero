@@ -1,10 +1,13 @@
-resources :users, except: [:edit, :update] do	
-	member do
-		get 'basic_info' => 'users#basic_info'
-		get 'tags' => 'users#tags'
-	end
-	resources :profiles, only: [:edit, :update]
-end
+resources :users, except: [:edit, :update] do 
+    member do
+      get 'basic_info' 
+      #basic_info_user_path or basic_info_user_url
+      get 'tags' 
+      #tags_user_path or tags_user_url
+      patch 'update_tags'
+    end
+    
+  end
 
 
 class CreateTags < ActiveRecord::Migration
