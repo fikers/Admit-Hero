@@ -121,7 +121,7 @@ textarea {
   height: 500px;
 }
 
-.testimonials {
+.example {
   height: 95vh;
   background-color: white;
   @include flexbox();
@@ -176,36 +176,63 @@ textarea {
   }
   
   .cell1 {
-    background: url('../assets/pencil.jpg') center / cover;
+    background: url('https://dl.dropboxusercontent.com/u/134166818/download/landscapes/monika-1.jpg') center / cover;
   }
   .cell2 {
-    background: url('../assets/pisa.jpg') center / cover;
+    background: url('https://googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/kulesza-61.jpg') center / cover;
   }
   .cell3 {
-    background: url('../assets/typing.jpg') center / cover;
+    background: url('https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/technology/kadysz-30.jpg') center / cover;
   }
   .cell4 {
-    background: url('../assets/bridge.jpg') center / cover;
+    background: url('https://googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/objects/krzysztof-13.jpg') center / cover;
   }
 }
 
 .logos {
   height: 100vh;
-  background: url('../assets/logo-background2.png') center / cover;
-  display: inline-block;
   width: 100%;
-  .logos-text {
-    color: #212121;
-    font-style: bold;
+
+  @include flexbox();
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+
+  .logos-title {
+    @include flex(1 0 100%);
+    padding: 15px;
   }
+
+  .logos-testimonial {
+    @include order(1);
+    @include flex(0 0 20%);
+
+    .profile {
+      border-radius: 50%;
+      height: 30vh;
+      width: auto;
+      display: block;
+      margin: auto;
+    }
+    h6 {
+      color: #1976d2;
+      text-align: center;
+    }
+    q {
+      font-style: italic;
+      font-size: 1em;
+    }
+
+  }
+
+  .logos-text {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
 }
 
-.stuff {
-  height: 500px;
-  background-color: #bbdefb;
-  display: inline-block;
-  width: 100%;
-}
 
 /* typography */
 
