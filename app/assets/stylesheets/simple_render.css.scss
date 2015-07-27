@@ -175,16 +175,16 @@ textarea {
   }
   
   .cell1 {
-    background: url('../assets/pencil.jpg') center / cover;
+    background: url('https://dl.dropboxusercontent.com/u/134166818/download/landscapes/monika-1.jpg') center / cover;
   }
   .cell2 {
-    background: url('../assets/pisa.jpg') center / cover;
+    background: url('https://googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/kulesza-61.jpg') center / cover;
   }
   .cell3 {
-    background: url('../assets/typing.jpg') center / cover;
+    background: url('https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/technology/kadysz-30.jpg') center / cover;
   }
   .cell4 {
-    background: url('../assets/bridge.jpg') center / cover;
+    background: url('https://googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/objects/krzysztof-13.jpg') center / cover;
   }
 }
 
@@ -205,6 +205,7 @@ textarea {
   .logos-testimonial {
     @include order(1);
     @include flex(0 0 20%);
+
     .profile {
       border-radius: 50%;
       height: 30vh;
@@ -216,6 +217,11 @@ textarea {
       color: #1976d2;
       text-align: center;
     }
+    q {
+      font-style: italic;
+      font-size: 1em;
+    }
+
   }
 
   .logos-text {
@@ -226,12 +232,6 @@ textarea {
 
 }
 
-.stuff {
-  height: 500px;
-  background-color: #bbdefb;
-  display: inline-block;
-  width: 100%;
-}
 
 /* typography */
 
