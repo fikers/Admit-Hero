@@ -39,16 +39,13 @@
 
 
 <!--<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >-->
-  
-  
+<% if !logged_in? && current_page?(root_url) %>
 
 <header class="custom2  mdl-js-layout mdl-layout--fixed-header">
   <div class="mdl-layout__header-row mdl-layout__header">
-     <!--Title -->
     <span class="mdl-layout-title "><img src="../assets/yellow_256.png"/>  Admit Hero</span>
      <!--Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer" ></div>
-     <!--Navigation. We hide it in small screens. -->
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
       <a class="mdl-navigation__link" href=signup>Sign Up</a>
       <a class="mdl-navigation__link" href="">Link</a>
@@ -57,23 +54,51 @@
     </nav>
   </div>
 </header>
-  
-<header class="mdl-layout__transparent mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+<header class="custom4">
   <div class="mdl-layout__header-row">
-     <!--Title -->
     <span class="mdl-layout-title" style="color:white"><img src="../assets/yellow_256.png"/>  Admit Hero</span>
      <!--Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer" ></div>
-     <!--Navigation. We hide it in small screens. -->
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
       <a class="mdl-navigation__link" href=signup>Sign Up</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href=about>Link</a>
+      <a class="mdl-navigation__link" href=about>Link</a>
+      <a class="mdl-navigation__link" href=about>Link</a>
     </nav>
   </div>
 </header>
   
+<!--<header class="mdl-layout__transparent mdl-layout mdl-js-layout mdl-layout--fixed-header">-->
+<!--  <div class="mdl-layout__header-row">-->
+<!--    <span class="mdl-layout-title" style="color:white">Admit Hero</span>-->
+<!--    <div class="mdl-layout-spacer" ></div>-->
+<!--    <nav class="mdl-navigation mdl-layout--large-screen-only" >-->
+<!--      <a class="mdl-navigation__link" href=signup>Sign Up</a>-->
+<!--      <a class="mdl-navigation__link" href=about>Link</a>-->
+<!--      <a class="mdl-navigation__link" href=about>Link</a>-->
+<!--      <a class="mdl-navigation__link" href=about>Link</a>-->
+<!--    </nav>-->
+<!--  </div>-->
+<!--</header>-->
   
+<% else %>
+
+<div class="custom3 mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title"><a class="home_link", href='/' %>Admit Hero</a></span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="">tree</a>
+        <a class="mdl-navigation__link" href="">tree</a>
+        <a class="mdl-navigation__link" href='/about'>About</a>
+        <a class="mdl-navigation__link" href='/login'>Login</a>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<% end %>
 
 <!--</div>-->
