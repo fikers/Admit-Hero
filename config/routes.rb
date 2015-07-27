@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       #basic_info_user_path or basic_info_user_url
       get 'tags' 
       #tags_user_path or tags_user_url
+      patch 'update_tags'
     end
     
   end

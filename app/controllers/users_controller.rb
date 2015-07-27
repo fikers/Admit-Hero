@@ -19,8 +19,17 @@ class UsersController < ApplicationController
   	end
 
   	def tags
-  		@user = User.find(params[:id])
-  		@tags = @user.tag
+  		@tags = User.find(params[:id]).tag
+  	end
+
+  	def update_tags
+  		@tags = User.find(params[:id]).tag
+  		if @tags.update_attributes(tag_params)
+  			flash[:success] = "Updated"
+  			redirect_to tags_user_url
+  		else
+  			flash[:danger] = "Update failed, please make sure you are logged in."
+  		end
   	end
 
   	def create
@@ -44,6 +53,12 @@ class UsersController < ApplicationController
 
   		def user_params
   			params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  		end
+
+  		def tag_params
+  			params.require(:tag).permit(:summer_programs, :scholarships, :stem, :humanities,
+  										:computer_science, :traveling, :community_service,
+  										:research, :internships, :arts)
   		end
 
   		def logged_in_user
