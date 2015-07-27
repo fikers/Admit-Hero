@@ -20,10 +20,10 @@
       
       
 	<div class="center-title">
-		<h1 class="title">Welcome to Admit Hero</h1>
+		<h1 class="title">Be a Superhero</h1>
 	</div>
 
-  <div class="col-md-6 col-md-offset-3 sign-up-form">
+  <div class="sign-up-form">
     <%= form_for(@user) do |f| %>
     	<%= render 'shared/error_messages' %>
     	
@@ -47,14 +47,44 @@
       	<%= f.password_field :password_confirmation, class: 'mdl-textfield__input' %>
       </div>
 
-      	<%= f.submit "Create my account", class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-button" %>
+      <div class="user-text">
+      <%= f.submit "Create my account", class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-button" %>
+      </div>
     <% end %>
-  
-</div>
+	</div>
 </div>
 
 <div class="testimonials">
-	slideshow thingy here?
+	<div class="heading">
+		<h2>Heading</h2>
+	</div>
+	<div class="picture">
+	</div>
+	<div class="text">
+		<h2>A Tale of Two Cities</h2>
+		<p>It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way - in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.</p>
+	</div>
 </div>
 
+<div class="grid">
+	<div class="grid-cell cell1">
+		<h3 class="grid-text">Get organized</h3>
+	</div>
+	<div class="grid-cell cell2">
+		<h3 class="grid-text">Discover opportunities</h3>
+	</div>
+	<div class="grid-cell cell3">
+		<h3 class="grid-text">Tips from successful students</h3>
+	</div>
+	<div class="grid-cell cell4">
+		<h3 class="grid-text">Find scholarships to help pay for college</h3>
+	</div>
+</div>
 
+<div class="logos">
+	<h2 class="logos-text">I don't know what goes here</h2>
+</div>
+
+<div class="stuff">
+	<h2>For schools?</h2>
+</div>

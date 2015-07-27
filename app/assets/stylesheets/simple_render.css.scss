@@ -11,32 +11,6 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
-/* universal */
-
-html {
-	overflow-y: scroll;
-}
-
-body {
-  margin: 0;
-	padding: 0;
-}
-
-section {
-    overflow: auto;
-}
-
-textarea {
-	resize: vertical;
-}
-
-// .center {
-// 	text-align: center;
-// 	h1 { 
-// 		margin-bottom: 10px;
-// 	}
-// }
-
 @mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;
@@ -61,50 +35,92 @@ textarea {
   order: $val;
 }
 
+/* universal */
+
+@media (max-width: 600px), handheld {
+  .title {
+    font-size: 36px;
+    color: white;
+  }
+
+  #mouse {
+
+    .sign-up-form {
+      width: 100vw;
+
+      .user-text {
+        width: 100vw;
+      }
+
+    }
+  }
+}
+
+html {
+	overflow-y: scroll;
+}
+
+
+section {
+    overflow: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+
 #mouse {
+<<<<<<< HEAD
   background: url('../assets/book.jpg') center / cover;
   height: 500px;
   
   
+=======
+
+  background: url('https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/prince-5.jpeg') center / cover;
+  height: 100vh;
+  width: 100vw;
+>>>>>>> 69bf9f6f2108d797b9e64dc37adf8ecc7cbe57b0
 
   @include flexbox();
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  -webkit-justify-content: center;
   align-content: center;
   align-items: center;
-  padding: 100px;
+  //padding: 100px;
+
+  .center-title {
+    background-color: white;
+    opacity: .70;
+    width: 100vw;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    h1 {
+      color: #1976d2;
+    }
+  }
+
+  .sign-up-form {
+    //background-color: white;
+    width: 85%;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+
+    .user-text {
+      width: 50%;
+    }
+  }
 }
 
-.center-title {
-  margin: auto;
-  width: 100%;
-  @include order(1);
-  margin: 10px;
-}
 
-.sign-up-form {
-  @include order(2);
-
-  @include flexbox();
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: baseline;
-  align-content: flex-start;
-
-  margin: auto;
-  width: 75%;
-}
-
-.user-text {
-  @include order(0);
-  width: 45%;
-}
-
-.create-button {
-  width: 30%;
-}
 
 #about {
   background-color: gray;
@@ -112,10 +128,84 @@ textarea {
 }
 
 .testimonials {
-  height: 400px;
-  background-color: gray;
+  height: 95vh;
+  background-color: white;
+  @include flexbox();
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 2% 5%;
+
+  .heading {
+    width: 100vw;
+  }
+
+  .picture {
+    width: 50vw;
+    height: 50vh;
+    background: url(../assets/how-to.png) center / cover;
+  }
+
+  .text {
+    flex-grow: 1;
+    width: 33vw;
+    padding-left: 5%;
+    word-break: break-all;
+  }
 }
 
+.grid {
+  @include flexbox();
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  align-content: flex-start;
+
+  .grid-cell {
+    width: 50%;
+    height: 300px;
+    text-align: center;
+    display: table;
+  }
+
+  .grid-text {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .cell1 {
+    background: url('../assets/pencil.jpg') center / cover;
+  }
+  .cell2 {
+    background: url('../assets/pisa.jpg') center / cover;
+  }
+  .cell3 {
+    background: url('../assets/typing.jpg') center / cover;
+  }
+  .cell4 {
+    background: url('../assets/bridge.jpg') center / cover;
+  }
+}
+
+.logos {
+  height: 500px;
+  background-color: #2196f3;
+  display: inline-block;
+  width: 100%;
+  .logos-text {
+    color: #212121;
+  }
+}
+
+.stuff {
+  height: 500px;
+  background-color: #bbdefb;
+  display: inline-block;
+  width: 100%;
+}
 
 /* typography */
 
@@ -160,6 +250,10 @@ p {
 //   		text-decoration: none;
 // 	}
 // }
+img {
+  height: 40px;
+  width: auto;
+}
 
 /*footer*/
 
