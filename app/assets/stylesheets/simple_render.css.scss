@@ -191,11 +191,12 @@ textarea {
 
 .logos {
   height: 100vh;
-  background: url('../assets/logo-background.png') center / cover;
+  background: url('../assets/logo-background2.png') center / cover;
   display: inline-block;
   width: 100%;
   .logos-text {
     color: #212121;
+    font-style: bold;
   }
 }
 
