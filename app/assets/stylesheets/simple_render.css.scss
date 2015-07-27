@@ -129,23 +129,28 @@ textarea {
   justify-content: space-between;
   align-items: flex-start;
   align-content: flex-start;
-  padding: 2% 5%;
+  padding: 3% 8%;
 
   .heading {
     width: 100vw;
+    padding-bottom: 1%;
   }
 
   .picture {
-    width: 50vw;
+    width: 40vw;
     height: 50vh;
     background: url(../assets/how-to.png) center / cover;
   }
 
   .text {
-    flex-grow: 1;
-    width: 33vw;
-    padding-left: 5%;
-    word-break: break-all;
+    flex-grow: 0;
+    width: 40vw;
+    padding-left: 4%;
+    word-break: break-word;
+    text-align: left;
+    h3 {
+      text-align: left;
+    }
   }
 }
 
@@ -184,8 +189,8 @@ textarea {
 }
 
 .logos {
-  height: 500px;
-  background-color: #2196f3;
+  height: 100vh;
+  background: url('../assets/logo-background.png') center / cover;
   display: inline-block;
   width: 100%;
   .logos-text {
