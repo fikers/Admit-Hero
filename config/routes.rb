@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get 'about' => 'static_pages#about'
+  
+  get 'news' => 'static_pages#news'
 
   get 'signup' => 'users#new'
 
