@@ -71,17 +71,11 @@ textarea {
 
 
 #mouse {
-<<<<<<< HEAD
   background: url('../assets/book.jpg') center / cover;
   height: 500px;
-  
-  
-=======
-
   background: url('https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/prince-5.jpeg') center / cover;
   height: 100vh;
   width: 100vw;
->>>>>>> 69bf9f6f2108d797b9e64dc37adf8ecc7cbe57b0
 
   @include flexbox();
   flex-direction: column;
