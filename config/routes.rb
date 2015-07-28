@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'password_resets/new'
-
-  get 'password_resets/edit'
-
   root 'static_pages#home'
 
   get 'about' => 'static_pages#about'
+  
+  get 'news' => 'static_pages#news'
 
   get 'signup' => 'users#new'
 
@@ -16,11 +14,20 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'sessions#destroy' 
 
-  resources :users
+  resources :users do 
+    member do
+      get :basic_info, :tags
+      #basic_info_user_path or basic_info_user_url
+      #tags_user_path or tags_user_url
+      patch :update_tags
+    end
+  end 
 
   resources :account_activations, only: [:edit]
 
   resources :password_resets,     only: [:new, :edit, :create, :update]
+
+
 
 
 

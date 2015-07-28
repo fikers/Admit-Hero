@@ -1,1 +1,11 @@
-<%= @user.name %> <%= @user.email %>
+<%= provide(:title , "Profile") %>
+
+<aside>
+<%= render 'users/profile_side' %>
+</aside>
+
+<h1>Account Information</h1>
+<p>
+<%= @user.name %> <br>
+<%= @user.email %>
+</p>

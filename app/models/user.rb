@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+	has_one :basic_info, dependent: :destroy
+	has_one :tag, dependent: :destroy
+	after_create :create_tag, :create_basic_info
 	attr_accessor :remember_token, :activation_token, :password_reset_token
 													 
 	before_save :downcase_email

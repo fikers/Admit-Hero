@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  summer_programs: false
+  scholarships: false
+  stem: false
+  humanities: false
+  computer_science: false
+  traveling: false
+  community_service: false
+  research: false
+  internships: false
+  arts: false
+
+two:
+  user_id: 
+  summer_programs: false
+  scholarships: false
+  stem: false
+  humanities: false
+  computer_science: false
+  traveling: false
+  community_service: false
+  research: false
+  internships: false
+  arts: false

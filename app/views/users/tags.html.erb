@@ -1,0 +1,67 @@
+<%= provide(:title , "Profile") %>
+
+<aside>
+<%= render 'users/profile_side' %>
+</aside>
+
+<h1>Tags</h1>
+	
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+		<%= form_for @tags, url: update_tags_user_path do |f| %>
+			<%= f.label :summer_programs, class: "checkbox inline" do %>
+				<%= f.check_box :summer_programs %>
+				<span>Summer Programs</span>
+			<% end %>
+
+			<%= f.label :scholarships, class: "checkbox inline" do %>
+				<%= f.check_box :scholarships %>
+				<span>Scholarships</span>
+			<% end %>
+			
+			<%= f.label :stem, class: "checkbox inline" do %>
+				<%= f.check_box :stem %>
+				<span>STEM</span>
+			<% end %>
+
+			<%= f.label :humanities, class: "checkbox inline" do %>
+				<%= f.check_box :humanities %>
+				<span>Humanities</span>
+			<% end %>
+
+			<%= f.label :computer_science, class: "checkbox inline" do %>
+				<%= f.check_box :computer_science %>
+				<span>Computer Science</span>
+			<% end %>
+
+			<%= f.label :traveling, class: "checkbox inline" do %>
+				<%= f.check_box :traveling %>
+				<span>Traveling</span>
+			<% end %>
+
+			<%= f.label :community_service, class: "checkbox inline" do %>
+				<%= f.check_box :community_service %>
+				<span>Community Service</span>
+			<% end %>
+
+			<%= f.label :research, class: "checkbox inline" do %>
+				<%= f.check_box :research %>
+				<span>Research</span>
+			<% end %>
+
+			<%= f.label :internships, class: "checkbox inline" do %>
+				<%= f.check_box :internships %>
+				<span>Internships</span>
+			<% end %>
+
+			<%= f.label :arts, class: "checkbox inline" do %>
+				<%= f.check_box :arts %>
+				<span>Arts</span>
+			<% end %>
+
+			<%= f.submit "Update", class: "btn btn-primary" %>
+		<% end %>
+	</div>
+</div>
+
+
