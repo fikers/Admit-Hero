@@ -101,17 +101,20 @@ textarea {
     }
   }
 
-  .sign-up-form {
-    //background-color: white;
-    width: 85%;
-    align-self: flex-start;
-    display: flex;
-    justify-content: center;
-
-    .user-text {
-      width: 50%;
-    }
+  .create-button {
+    padding-top: 20vh;
   }
+
+  // .sign-up-form {
+  //   //background-color: white;
+  //   width: 85%;
+  //   align-self: flex-start;
+  //   display: flex;
+  //   justify-content: center;
+
+  //   .user-text {
+  //     width: 50%;
+  //   }
 }
 
 
@@ -132,14 +135,14 @@ textarea {
   align-content: flex-start;
   padding: 3% 8%;
 
-  .heading {
-    width: 100vw;
-    padding-bottom: 1%;
-  }
+  // .heading {
+  //   width: 100vw;
+  //   padding-bottom: 1%;
+  // }
 
   .picture {
     width: 40vw;
-    height: 50vh;
+    height: 60vh;
     background: url(../assets/how-to.png) center / cover;
   }
   
@@ -155,7 +158,8 @@ textarea {
     padding-left: 4%;
     word-break: break-word;
     text-align: left;
-    h3 {
+    h2, h4 {
+      color: black;
       text-align: left;
     }
   }
