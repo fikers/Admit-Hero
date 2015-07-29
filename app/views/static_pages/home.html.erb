@@ -18,9 +18,11 @@
 	
 <div id="mouse">
       
-    <div><% flash.each do |message_type, message| %>
+  <div>
+  	<% flash.each do |message_type, message| %>
 		<div class="alert alert-<%= message_type %>"><%= message %></div>
-	<% end %></div>
+		<% end %>
+	</div>
 	
 	<div class="center-title">
 		<h1 class="title">Be a Superhero</h1>
