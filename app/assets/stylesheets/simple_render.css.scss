@@ -134,40 +134,46 @@ textarea {
   align-content: flex-start;
   padding: 4% 12% 5% 12%;
 
+  .divider {
+    border-bottom: 1px solid #1976d2;
+    width: 75vw;
+    height: 6vh;
+  }
+
   .heading {
     width: 100vw;
     text-align: center;
     padding-bottom: -1vh;
     h2 {
       font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
+      // font-weight: bold;
       color: #2196f3;
       letter-spacing: 1px;
     }
   }
 
   .picture {
-    width: 40%;
+    width: 34%;
     // height: 25vh;
-    padding-bottom: 38%;
+    padding-bottom: 32%;
     padding-right: 13%;
   }
 
   #pic1 {
-    background: url('http://placekitten.com/300/300') center / cover;
-    margin-top: 5%;
+    background: url('../assets/book.jpg') center / cover;
+    margin-top: 4%;
   }
 
   #pic2 {
-    background: url('http://placekitten.com/300/300') center / cover;
+    background: url('../assets/typing.jpg') center / cover;
     padding-left: 13%;
     padding-right: 0;
-    margin-top: 5%;
+    margin-top: 4%;
   }
 
   #pic3 {
-    background: url('http://placekitten.com/300/300') center / cover;
-    margin-top: 5%;
+    background: url('../assets/bridge.jpg') center / cover;
+    margin-top: 4%;
   }
 
   .text {
@@ -184,7 +190,7 @@ textarea {
       text-align: left;
       line-height: 60%;
       font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
+      // font-weight: bold;
     }
 
     h5 {
@@ -207,6 +213,21 @@ textarea {
     letter-spacing: 1px;
   }
 
+}
+
+#scholarship-logos {
+  padding: 5vh 10vw;
+  @include flexbox();
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .scholarship-header {
+    width: 100%;
+  }
+
+  .logo-div {
+    width: 20%;
+  }
 }
 
 .grid {
