@@ -1,6 +1,7 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .demo-card-wide.mdl-card {
     width: 512px;
 }
@@ -47,6 +48,7 @@
     position: fixed;
     display: none;
     width: 100%;
+    
     
 }
 
@@ -116,3 +118,98 @@
 .link_to {
     color: white;
 }
+
+.mdl-navigation__link {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+#getstarted {
+    line-height: 50px;
+    font-size: 1.5em;
+    
+    background: #00A9EC;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+
+    &:hover, &:focus, &:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    text-decoration: none;
+    }
+}
+
+
+#getstarted2 {
+    font-size: 1.1em;
+    font-family: "Slabo 27px", serif;
+    
+    background: #00A9EC;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+
+    &:hover, &:focus, &:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    text-decoration: none;
+    }
+}
+
+
+.start {
+    max-width: 400px;
+    min-height: 475px;
+    margin-left:auto;
+    margin-right:auto;
+    // min-height: 800px;
+    padding: 5px 5px 5px 5px;
+    border-style:solid;
+    border-color: #A4A6BA;
+    padding: 0px 20px 20px 20px;
+    overflow:auto;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px 5px 5px #888888;
+
+}
+
+// .car {
+//     float: right;
+//     background-image:url(http://i.imgur.com/1xma5x3.jpg);
+//     height: 80vh;
+//     width: 60vw;
+//     overflow:auto;
+// }
+
+.col-md-6 {
+    width: 360px;
+}
+
+#title {
+    width: 200px;
+    margin-left:0;
+    margin-right: auto;
+}
+
+
+

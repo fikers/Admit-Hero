@@ -41,29 +41,27 @@
 <!--<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >-->
 <% if !logged_in? && current_page?(root_url) %>
 
-<header class="custom2  mdl-js-layout mdl-layout--fixed-header">
-  <div class="mdl-layout__header-row mdl-layout__header">
-    <span class="mdl-layout-title "><img src="../assets/yellow_256.png"/>  Admit Hero</span>
+<header class="custom2  mdl-js-layout mdl-layout--fixed-header" id="header">
+  <div class="mdl-layout__header-row mdl-layout__header" >
+    <span class="mdl-layout-title "><img src="../assets/white_logotype256_720.png"/></span>
      <!--Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer" ></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
-      <a class="mdl-navigation__link" href=signup>Sign Up</a>
-      <a class="mdl-navigation__link" href=news>News</a>
-      <a class="mdl-navigation__link" href=about>About</a>
-      <a class="mdl-navigation__link" href=login>Login</a>
+      <a class="mdl-navigation__link" id="font" href="#works">HOW IT WORKS</a>
+      <a class="mdl-navigation__link" id="getstarted2" href=signup>GET STARTED</a>
+      <a class="mdl-navigation__link" id="font" href=login>LOGIN</a>
     </nav>
   </div>
 </header>
 
 <header class="custom4">
   <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title" style="color:white"><img src="../assets/yellow_256.png"/>  Admit Hero</span>
+    <span class="mdl-layout-title" style="color:white"><img src="../assets/white_logotype256_720.png"/></span>
      <!--Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer" ></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
-      <a class="mdl-navigation__link" href=signup>Sign Up</a>
-      <a class="mdl-navigation__link" href=news>News</a>
-      <a class="mdl-navigation__link" href=about>About</a>
+      <a class="mdl-navigation__link" href="#works">How it works</a>
+      <a class="mdl-navigation__link" id="getstarted" href=signup>Get Started</a>
       <a class="mdl-navigation__link" href=login>Login</a>
     </nav>
   </div>
