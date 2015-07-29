@@ -1,8 +1,141 @@
 <% provide(:title, "Home") %>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+<% if logged_in? %>
+<p>tree</p>
 
-<div class="center jumbotron">
+<% else %>
+<!-- <div class="center jumbotron mdl-shadow--2dp" id="car">
       <h1>Welcome to AdmitHero</h1>
-      <h2>This is the home page of AdmitHero Webapp</h2>
+      <h2 class="custom">This is the home page of AdmitHero Webapp. This is the home page of AdmitHero Webapp. This is the home page of AdmitHero Webapp. This is the home page of AdmitHero Webapp.</h2>
+      <p>test edit</p>
 </div>
 
+<div class="center jumbotron mdl-shadow--2dp" id="car2">
+      <p>scroll down</p>
+      <h1 class="custom">Welcome to AdmitHero</h1>
+      <h2 class="custom">This is the home page of AdmitHero Webapp</h2>
+      <p>test edit</p>
+</div> -->
+
+
+<!-- <div class="mdl-grid"> -->
+	
+<div id="mouse">
+      
+  <div>
+  	<% flash.each do |message_type, message| %>
+		<div class="alert alert-<%= message_type %>"><%= message %></div>
+		<% end %>
+	</div>
+	
+	<div class="center-title">
+		<h1 class="title">Be a Superhero</h1>
+	</div>
+
+<!--   <div class="sign-up-form">
+    <%= form_for(@user) do |f| %>
+    	<%= render 'shared/error_messages' %>
+    	
+			<div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
+      	<%= f.label :name, class: 'mdl-textfield__label' %>
+      	<%= f.text_field :name, class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
+      	<%= f.label :email, class: 'mdl-textfield__label' %>
+      	<%= f.email_field :email, class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
+      	<%= f.label :password, class: 'mdl-textfield__label' %>
+      	<%= f.password_field :password, class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
+      	<%= f.label :password_confirmation, class: 'mdl-textfield__label' %>
+      	<%= f.password_field :password_confirmation, class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="user-text">
+      <%= f.submit "Create my account", class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-button" %>
+      </div>
+    <% end %>
+	</div> -->
+
+	<a href=signup class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-button">Let's get started!</a>
+</div>
+<a name="works"></a>
+
+<div class="example">
+	<div class="heading">
+		<h2>What is Admit Hero?</h2>
+	</div>
+	<div id="pic1" class="picture"></div>
+	<div class="text">
+		<h5>What we provide</h5>
+		<h6>Blah blah blah placeholder text</h6>
+		<p>Lolita, light of my life, fire of my loins. My sin, my soul. Lo-lee-ta: the tip of the tongue taking a trip of three steps down the palate to tap, at three, on the teeth. Lo. Lee. Ta. She was Lo, plain Lo, in the morning, standing four feet ten in one sock. She was Lola in slacks. She was Dolly at school. She was Dolores on the dotted line. But in my arms she was always Lolita. Did she have a precursor? She did, indeed she did. (Lolita, Vladimir Nabokov)</p>
+	</div>
+	<div id="text2" class="text">
+		<h5>Successful student profiles</h5>
+		<h6>Possible subheading</h6>
+		<p>Call me Ishmael. Some years ago - never mind how long precisely - having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. (Moby Dick, Herman Melville)</p>
+	</div>
+	<div id="pic2" class="picture"></div>
+	<div id="pic3" class="picture"></div>
+	<div id="text3" class="text">
+		<h5>Personalized for you</h5>
+		<h6>Personalize all the things!</h6>
+		<p>The studio was filled with the rich odour of roses, and when the light summer wind stirred amidst the trees of the garden, there came through the open door the heavy scent of the lilac, or the more delicate perfume of the pink-flowering thorn. (The Picture of Dorian Gray, Oscar Wilde)</p>
+	</div>
+</div>
+
+<div class="grid">
+	<div class="grid-cell cell1">
+		<h3 class="grid-text">Get organized</h3>
+	</div>
+	<div class="grid-cell cell2">
+		<h3 class="grid-text">Discover opportunities</h3>
+	</div>
+	<div class="grid-cell cell3">
+		<h3 class="grid-text">Tips from successful students</h3>
+	</div>
+	<div class="grid-cell cell4">
+		<h3 class="grid-text">Find scholarships to help pay for college</h3>
+	</div>
+</div>
+
+<div class="logos">
+<div class="logos-title">
+		<h2 class="logos-text">What students are saying about admithero...</h2>
+	</div>
+	<div class="logos-testimonial">
+		<img class="profile" src="https://googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/kulesza-60.jpg" />
+		<h6>Jane A.</h6>
+		<q>It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.</q>
+		<br/>
+		<p><br/>Awards won:</p>
+		<img src="http://loremflickr.com/100/100/cats" alt="Cat photo" />	<img src="http://loremflickr.com/100/100/fashion">
+	</div>
+	<div class="logos-testimonial">
+		<img class="profile" src="https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/esprit-1.jpg" />
+		<h6>Sylvia P.</h6>
+		<q>It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York.</q>
+		<br/>
+		<p><br/>Awards won:</p>
+		<img src="http://loremflickr.com/100/100/nature" />	<img src="http://loremflickr.com/100/100/nightlife" />
+	</div>
+	<div class="logos-testimonial">
+		<img class="profile" src="https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/bock-2.jpg" />
+		<h6>Italo C.</h6>
+		<q>You are about to begin reading Italo Calvino's new novel, If on a winter's night a traveler.</q>
+		<p><br/>Awards won:</p>
+		<img src="http://loremflickr.com/100/100/award" />	<img src="http://loremflickr.com/100/100/medal" />
+	</div>
+</div>
+
+<% end %>

@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
  /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -11,15 +12,55 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
 /* universal */
+
+@media (max-width: 600px), handheld {
+  .title {
+    font-size: 36px;
+    color: white;
+  }
+
+  #mouse {
+
+    .sign-up-form {
+      width: 100vw;
+
+      .user-text {
+        width: 100vw;
+      }
+
+    }
+  }
+}
 
 html {
 	overflow-y: scroll;
 }
 
-body {
-	padding-top: 60px;
-}
 
 section {
     overflow: auto;
@@ -29,12 +70,221 @@ textarea {
 	resize: vertical;
 }
 
-.center {
-	text-align: center;
-	
-	h1 { 
-		margin-bottom: 10px;
-	}
+
+#mouse {
+  height: 500px;
+  background: url('https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/prince-5.jpeg') center / cover;
+  height: 100vh;
+  width: 100vw;
+
+  @include flexbox();
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-content: center;
+  align-items: center;
+  //padding: 100px;
+
+  .center-title {
+    background-color: white;
+    opacity: .70;
+    width: 100vw;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    h1 {
+      color: #1976d2;
+    }
+  }
+
+  .create-button {
+    border-radius: 5%;
+  }
+
+  // .sign-up-form {
+  //   //background-color: white;
+  //   width: 85%;
+  //   align-self: flex-start;
+  //   display: flex;
+  //   justify-content: center;
+
+  //   .user-text {
+  //     width: 50%;
+  //   }
+}
+
+
+
+#about {
+  background-color: gray;
+  height: 500px;
+}
+
+.example {
+  background-color: white;
+  @include flexbox();
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  padding: 4% 12% 5% 12%;
+
+  .heading {
+    width: 100vw;
+    text-align: center;
+    padding-bottom: -1vh;
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      color: #2196f3;
+      letter-spacing: 1px;
+    }
+  }
+
+  .picture {
+    width: 40%;
+    // height: 25vh;
+    padding-bottom: 38%;
+    padding-right: 13%;
+  }
+
+  #pic1 {
+    background: url('http://placekitten.com/300/300') center / cover;
+    margin-top: 5%;
+  }
+
+  #pic2 {
+    background: url('http://placekitten.com/300/300') center / cover;
+    padding-left: 13%;
+    padding-right: 0;
+    margin-top: 5%;
+  }
+
+  #pic3 {
+    background: url('http://placekitten.com/300/300') center / cover;
+    margin-top: 5%;
+  }
+
+  .text {
+    flex-grow: 0;
+    width: 40vw;
+    height: 50vh;
+    word-break: break-word;
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: light;
+    padding-left: 13%;
+
+    h5, h6 {
+      text-align: left;
+      line-height: 60%;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+    }
+
+    h5 {
+      color: #1976d2;
+      font-size: 170%;
+    }
+  }
+
+  #text2 {
+    padding-right: 13%;
+    padding-left: 0;
+  }
+
+  // #text3 {
+    // margin-top: 2%;
+  // }
+
+  p {
+    font-size: 120%;
+    letter-spacing: 1px;
+  }
+
+}
+
+.grid {
+  @include flexbox();
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  align-content: flex-start;
+
+  .grid-cell {
+    width: 50%;
+    height: 300px;
+    text-align: center;
+    display: table;
+  }
+
+  .grid-text {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .cell1 {
+    background: url('https://dl.dropboxusercontent.com/u/134166818/download/landscapes/monika-1.jpg') center / cover;
+  }
+  .cell2 {
+    background: url('https://googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/kulesza-61.jpg') center / cover;
+  }
+  .cell3 {
+    background: url('https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/technology/kadysz-30.jpg') center / cover;
+  }
+  .cell4 {
+    background: url('https://googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/objects/krzysztof-13.jpg') center / cover;
+  }
+}
+
+.logos {
+  height: 100vh;
+  width: 100%;
+
+  @include flexbox();
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+
+  .logos-title {
+    @include flex(1 0 100%);
+    padding: 15px;
+  }
+
+  .logos-testimonial {
+    @include order(1);
+    @include flex(0 0 20%);
+
+    .profile {
+      border-radius: 50%;
+      height: 30vh;
+      width: auto;
+      display: block;
+      margin: auto;
+    }
+    h6 {
+      color: #1976d2;
+      text-align: center;
+    }
+    q {
+      font-style: italic;
+      font-size: 1em;
+    }
+
+  }
+
+  .logos-text {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
 }
 
 
@@ -67,20 +317,23 @@ p {
 
 /* header */
 
-#logo {
-  	float: left;
-  	margin-right: 10px;
-  	font-size: 1.7em;
-  	color: #fff;
-  	text-transform: uppercase;
-  	letter-spacing: -1px;
-  	padding-top: 9px;
-  	font-weight: bold;
-	
-	&:hover {
-  		color: #fff;
-  		text-decoration: none;
-	}
+// #logo {
+//   	float: left;
+//   	margin-right: 10px;
+//   	font-size: 1.7em;
+//   	color: #fff;
+//   	text-transform: uppercase;
+//   	letter-spacing: -1px;
+//   	padding-top: 9px;
+//   	font-weight: bold;
+// 	&:hover {
+//   		color: #fff;
+//   		text-decoration: none;
+// 	}
+// }
+img {
+  height: 40px;
+  width: auto;
 }
 
 /*footer*/
@@ -90,7 +343,6 @@ footer {
   	padding-top: 5px;
   	border-top: 1px solid #eaeaea;
   	color: #777;
-  	
   	a {
   	  	color: #555;
   	  	
