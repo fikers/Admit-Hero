@@ -128,42 +128,67 @@ textarea {
   @include flexbox();
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   align-content: flex-start;
-  padding: 2% 5%;
+  padding: 1% 15% 5% 15%;
 
   .heading {
     width: 100vw;
     text-align: center;
+    h2 {
+      font-family: 'Montserrat';
+      font-weight: bold;
+      color: #2196f3;
+    }
   }
 
   .picture {
-    width: 35vw;
-    height: 30vh;
-    #1 {  
-      // background: url('../assets/pisa.jpg') center / cover;
-      background-color: blue;
-    }
-    #2 {
-      background: url('../assets/book.jpg') center / cover;
-    }
-    #3 {
-      background: url('../assets/bridge.jpg') center / cover;
-    }
+    width: 25vw;
+    height: 25vh;
+    padding-right: 10%;
+  }
+
+  #pic1 {
+    background: url('../assets/pisa.jpg') center / cover;
+  }
+
+  #pic2 {
+    background: url('../assets/bridge.jpg') center / cover;
+    padding-left: 10%;
+    padding-right: 0;
+  }
+
+  #pic3 {
+    background: url('../assets/book.jpg') center / cover;
   }
 
   .text {
     flex-grow: 0;
-    width: 50vw;
+    width: 35vw;
     height: 30vh;
-    padding-left: 4%;
     word-break: break-word;
     text-align: left;
-    h3, h4 {
-      color: black;
+    font-family: 'Source Sans Pro';
+    font-weight: light;
+    padding-left: 10%;
+
+    h5, h6 {
       text-align: left;
+      line-height: 60%;
+      font-family: 'Montserrat';
     }
+    h6 {
+      font-weight: bold;
+    }
+    h5 {
+      color: #1976d2;
+    }
+  }
+
+  #text2 {
+    padding-right: 10%;
+    padding-left: 0;
   }
 
 }
