@@ -4,6 +4,10 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+<% if logged_in? %>
+<p>tree</p>
+
+<% else %>
 <!-- <div class="center jumbotron mdl-shadow--2dp" id="car">
       <h1>Welcome to AdmitHero</h1>
       <h2 class="custom">This is the home page of AdmitHero Webapp. This is the home page of AdmitHero Webapp. This is the home page of AdmitHero Webapp. This is the home page of AdmitHero Webapp.</h2>
@@ -134,3 +138,4 @@
 	</div>
 </div>
 
+<% end %>
