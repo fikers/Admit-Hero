@@ -1,6 +1,11 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+#font {
+  font-family: 'Montserrat', sans-serif;
+}
 
 .demo-card-wide.mdl-card {
     width: 512px;
@@ -126,8 +131,9 @@
 }
 
 #getstarted {
+    font-family: 'Montserrat', sans-serif;
     line-height: 50px;
-    font-size: 1.5em;
+    // font-size: 1.5em;
     
     background: #00A9EC;
     display: inline-block;
@@ -152,8 +158,8 @@
 
 
 #getstarted2 {
-    font-size: 1.1em;
-    font-family: "Slabo 27px", serif;
+    // font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
     
     background: #00A9EC;
     display: inline-block;
@@ -190,7 +196,6 @@
     overflow:auto;
     border-radius: 5%;
     box-shadow: 5px 5px 5px 5px 5px #888888;
-
 }
 
 // .car {
@@ -207,9 +212,35 @@
 
 #title {
     width: 200px;
-    margin-left:0;
+    margin-left:auto;
     margin-right: auto;
 }
 
+.linker {
+    color: blue;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.start2 {
+    max-width: 400px;
+    min-height: 300px;
+    margin-left:auto;
+    margin-right:auto;
+    // min-height: 800px;
+    padding: 5px 5px 5px 5px;
+    border-style:solid;
+    border-color: #A4A6BA;
+    padding: 0px 20px 20px 20px;
+    overflow:auto;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px 5px 5px #888888;
+}
 
 
+#title2 {
+    width: 350px;
+    margin-left:auto;
+    margin-right: auto;
+}

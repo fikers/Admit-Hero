@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
 
   get 'login' => 'sessions#new'
+  
+  get 'reset' => 'password_resets#new'
 
   post 'login' => 'sessions#create'
 
