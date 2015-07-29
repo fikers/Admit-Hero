@@ -87,16 +87,33 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <span class="mdl-layout-title"><a class="home_link", href='/' %><img src="../assets/white_logotype256_720.png"/></a></span>
+      <% if !logged_in? %>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <% if !logged_in? %>
         <a class="mdl-navigation__link" id="font" href="/#works">HOW IT WORKS</a>
         <a class="mdl-navigation__link" id="getstarted2" href=signup>GET STARTED</a>
         <a class="mdl-navigation__link" id="font" href=login>LOGIN</a>
-        <% else %>
-        <!--logged in links-->
-        <% end %>
       </nav>
+      <% else %>
+        <div class="middle">
+        <!--<div>-->
+        <!--<div class="mdl-layout__tab-bar mdl-js-ripple-effect tabs">-->
+        <!--<a href="#fixed-tab-1" class="mdl-layout__tab is-active">Tab 1</a>-->
+        <!--<a href="#fixed-tab-2" class="mdl-layout__tab">Tab 2</a>-->
+        <!--<a href="#fixed-tab-3" class="mdl-layout__tab">Tab 3</a>-->
+        <!--</div>-->
+        <!--</div>    -->
+        
+            
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" id="font" href="#">SCHOLARSHIPS</a>
+            <a class="mdl-navigation__link" id="font" href="#">STUDENT PROFILES</a>
+            <a class="mdl-navigation__link" id="font" href="#">SUMMER PROGRAMS</a>
+            <a class="mdl-navigation__link" id="font" href="#">TIPS AND TRICKS</a>
+        </nav>
+        </div>
+        <%= link_to "LOGOUT", logout_path, method: "delete", class:"mdl-navigation__link", id:"font2"%>
+      <% end %>
     </div>
   </header>
 </div>

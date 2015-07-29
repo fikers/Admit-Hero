@@ -1,5 +1,9 @@
 <% provide(:title, "Home") %>
 
+<% if logged_in? %>
+<p>tree</p>
+
+<% else %>
 <!-- <div class="center jumbotron mdl-shadow--2dp" id="car">
       <h1>Welcome to AdmitHero</h1>
       <h2 class="custom">This is the home page of AdmitHero Webapp. This is the home page of AdmitHero Webapp. This is the home page of AdmitHero Webapp. This is the home page of AdmitHero Webapp.</h2>
@@ -118,3 +122,4 @@
 	</div>
 </div>
 
+<% end %>
