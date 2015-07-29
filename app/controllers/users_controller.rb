@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-	before_action :logged_in_user, except: [:new]
-	before_action :correct_user, except: [:new, :index, :destroy]
+	before_action :logged_in_user, except: [:new, :create]
+	before_action :correct_user, except: [:new, :create, :index, :destroy]
 	before_action :admin_user, only: [:index, :destroy]
 
 	def index
