@@ -258,3 +258,9 @@
   padding-left: 100px;
 }
 
+.mdl-js-ripple-effect .mdl-layout__tab {
+    color: white;
+    &:hover {
+        text-decoration: none;
+    }
+}
