@@ -7,3 +7,5 @@ $(window).scroll(function () {
     $('.custom2').slideUp();
   } 
 });
+
+

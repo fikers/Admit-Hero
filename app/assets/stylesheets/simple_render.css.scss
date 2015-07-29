@@ -72,7 +72,6 @@ textarea {
 
 
 #mouse {
-  background: url('../assets/book.jpg') center / cover;
   height: 500px;
   background: url('https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/prince-5.jpeg') center / cover;
   height: 100vh;
@@ -103,7 +102,7 @@ textarea {
   }
 
   .create-button {
-    padding-top: 20vh;
+    border-radius: 5%;
   }
 
   // .sign-up-form {
@@ -126,51 +125,88 @@ textarea {
 }
 
 .example {
-  height: 95vh;
   background-color: white;
   @include flexbox();
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   align-content: flex-start;
-  padding: 3% 8%;
+  padding: 4% 12% 5% 12%;
 
-  // .heading {
-  //   width: 100vw;
-  //   padding-bottom: 1%;
-  // }
+  .heading {
+    width: 100vw;
+    text-align: center;
+    padding-bottom: -1vh;
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      color: #2196f3;
+      letter-spacing: 1px;
+    }
+  }
 
   .picture {
-    width: 40vw;
-    height: 60vh;
-    background: url(../assets/how-to.png) center / cover;
+    width: 40%;
+    // height: 25vh;
+    padding-bottom: 38%;
+    padding-right: 13%;
   }
-  
-  .picture2 {
-    width: 50vw;
-    height: 75vh;
-    background: url(https://i.imgur.com/SKcpTjR.jpg) center / cover;
+
+  #pic1 {
+    background: url('http://placekitten.com/300/300') center / cover;
+    margin-top: 5%;
+  }
+
+  #pic2 {
+    background: url('http://placekitten.com/300/300') center / cover;
+    padding-left: 13%;
+    padding-right: 0;
+    margin-top: 5%;
+  }
+
+  #pic3 {
+    background: url('http://placekitten.com/300/300') center / cover;
+    margin-top: 5%;
   }
 
   .text {
     flex-grow: 0;
     width: 40vw;
-    padding-left: 4%;
+    height: 50vh;
     word-break: break-word;
     text-align: left;
-    h2, h4 {
-      color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: light;
+    padding-left: 13%;
+
+    h5, h6 {
       text-align: left;
+      line-height: 60%;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+    }
+
+    h5 {
+      color: #1976d2;
+      font-size: 170%;
     }
   }
-  
-  .text2 {
-    flex-grow: 1;
-    width: 33vw;
-    padding-left: 5%;
-    word-wrap: break-word;
+
+  #text2 {
+    padding-right: 13%;
+    padding-left: 0;
   }
+
+  // #text3 {
+    // margin-top: 2%;
+  // }
+
+  p {
+    font-size: 120%;
+    letter-spacing: 1px;
+  }
+
 }
 
 .grid {
