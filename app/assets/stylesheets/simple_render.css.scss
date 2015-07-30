@@ -72,8 +72,7 @@ textarea {
 
 
 #mouse {
-  height: 500px;
-  background: url('https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/prince-5.jpeg') center / cover;
+  background: url('http://i.imgur.com/6gb7yIN.jpg') center / cover;
   height: 100vh;
   width: 100vw;
 
@@ -125,7 +124,6 @@ textarea {
 }
 
 .example {
-  background-color: white;
   @include flexbox();
   flex-direction: row;
   flex-wrap: wrap;
@@ -134,40 +132,46 @@ textarea {
   align-content: flex-start;
   padding: 4% 12% 5% 12%;
 
+  .divider {
+    border-bottom: 1px solid #1976d2;
+    width: 75vw;
+    height: 6vh;
+  }
+
   .heading {
     width: 100vw;
     text-align: center;
     padding-bottom: -1vh;
     h2 {
       font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
+      // font-weight: bold;
       color: #2196f3;
       letter-spacing: 1px;
     }
   }
 
   .picture {
-    width: 40%;
+    width: 34%;
     // height: 25vh;
-    padding-bottom: 38%;
+    padding-bottom: 32%;
     padding-right: 13%;
   }
 
   #pic1 {
-    background: url('http://placekitten.com/300/300') center / cover;
-    margin-top: 5%;
+    background: url('http://i.imgur.com/Y5KsU5w.jpg') center / cover;
+    margin-top: 4%;
   }
 
   #pic2 {
-    background: url('http://placekitten.com/300/300') center / cover;
+    background: url('http://i.imgur.com/i3BAM4B.jpg') center / cover;
     padding-left: 13%;
     padding-right: 0;
-    margin-top: 5%;
+    margin-top: 4%;
   }
 
   #pic3 {
-    background: url('http://placekitten.com/300/300') center / cover;
-    margin-top: 5%;
+    background: url('http://i.imgur.com/vrekjPt.jpg') center / cover;
+    margin-top: 4%;
   }
 
   .text {
@@ -184,7 +188,7 @@ textarea {
       text-align: left;
       line-height: 60%;
       font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
+      // font-weight: bold;
     }
 
     h5 {
@@ -209,6 +213,37 @@ textarea {
 
 }
 
+#scholarship-logos {
+  padding: 5vh 10vw;
+  height: 70vh;
+  @include flexbox();
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .scholarship-header {
+    width: 100%;
+  }
+
+  .logo-div {
+    width: 20%;
+    height: 20vh;
+    //background-color: cyan;
+    .logo-img {
+      height: 100%;
+      width: auto;
+      display: block;
+      margin: auto;
+  }
+  }
+
+  .logo-img {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: auto;
+  }
+}
+
 .grid {
   @include flexbox();
   flex-direction: row;
@@ -230,22 +265,23 @@ textarea {
   }
   
   .cell1 {
-    background: url('https://dl.dropboxusercontent.com/u/134166818/download/landscapes/monika-1.jpg') center / cover;
+    background: url('http://i.imgur.com/JshkHwE.jpg') center / cover;
   }
   .cell2 {
-    background: url('https://googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/kulesza-61.jpg') center / cover;
+    background: url('http://i.imgur.com/GSWO4Sp.jpg') center / cover;
   }
   .cell3 {
-    background: url('https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/technology/kadysz-30.jpg') center / cover;
+    background: url('http://i.imgur.com/0z1ouBn.jpg') center / cover;
   }
   .cell4 {
-    background: url('https://googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/objects/krzysztof-13.jpg') center / cover;
+    background: url('http://i.imgur.com/Ylft8XT.jpg') center / cover;
   }
 }
 
 .logos {
-  height: 100vh;
+  height: 120vh;
   width: 100%;
+  background-color: #bbdefb;
 
   @include flexbox();
   flex-wrap: wrap;
@@ -253,8 +289,13 @@ textarea {
   align-items: baseline;
 
   .logos-title {
-    @include flex(1 0 100%);
-    padding: 15px;
+    @include flex(0 0 100%);
+    padding: 5% 5% 0;
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: normal;
+      margin: 0 15%; 
+    }
   }
 
   .logos-testimonial {
@@ -287,6 +328,18 @@ textarea {
 
 }
 
+#button-div {
+  @include flexbox();
+  height: 30vh;
+  background-color: #212121;
+  a {
+    display: block;
+    margin: auto;
+    vertical-align: middle;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150%;
+  }
+}
 
 /* typography */
 

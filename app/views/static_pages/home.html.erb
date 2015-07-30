@@ -36,13 +36,43 @@
 		<h1 class="title">Be a Superhero</h1>
 	</div>
 
+<!--   <div class="sign-up-form">
+    <%= form_for(@user) do |f| %>
+    	<%= render 'shared/error_messages' %>
+    	
+			<div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
+      	<%= f.label :name, class: 'mdl-textfield__label' %>
+      	<%= f.text_field :name, class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
+      	<%= f.label :email, class: 'mdl-textfield__label' %>
+      	<%= f.email_field :email, class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
+      	<%= f.label :password, class: 'mdl-textfield__label' %>
+      	<%= f.password_field :password, class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield textfield-demo user-text">
+      	<%= f.label :password_confirmation, class: 'mdl-textfield__label' %>
+      	<%= f.password_field :password_confirmation, class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="user-text">
+      <%= f.submit "Create my account", class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-button" %>
+      </div>
+    <% end %>
+	</div> -->
+
 	<a href=signup class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-button">Let's get started!</a>
 </div>
 <a name="works"></a>
 
 <div class="example">
 	<div class="heading">
-		<h2>What is Admit Hero?</h2>
+		<h2>Be The Superstar You Were Meant To Be</h2>
 	</div>
 	<div id="pic1" class="picture"></div>
 	<div class="text">
@@ -50,12 +80,14 @@
 		<h6>Blah blah blah placeholder text</h6>
 		<p>Lolita, light of my life, fire of my loins. My sin, my soul. Lo-lee-ta: the tip of the tongue taking a trip of three steps down the palate to tap, at three, on the teeth. Lo. Lee. Ta. She was Lo, plain Lo, in the morning, standing four feet ten in one sock. She was Lola in slacks. She was Dolly at school. She was Dolores on the dotted line. But in my arms she was always Lolita. Did she have a precursor? She did, indeed she did. (Lolita, Vladimir Nabokov)</p>
 	</div>
+	<div class="divider"></div>
 	<div id="text2" class="text">
 		<h5>Successful student profiles</h5>
 		<h6>Possible subheading</h6>
 		<p>Call me Ishmael. Some years ago - never mind how long precisely - having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. (Moby Dick, Herman Melville)</p>
 	</div>
 	<div id="pic2" class="picture"></div>
+	<div class="divider"></div>
 	<div id="pic3" class="picture"></div>
 	<div id="text3" class="text">
 		<h5>Personalized for you</h5>
@@ -79,12 +111,28 @@
 	</div>
 </div>
 
+<div id="scholarship-logos">
+	<div class="scholarship-header">
+		<h2>Scholarships</h2>
+	</div>
+	<div class="logo-div"><img class="logo-img" src="http://i.imgur.com/Zg5DKuT.gif" title="Coca Cola" /></div>
+	<div class="logo-div"><img class="logo-img" src="http://i.imgur.com/JVG172G.gif" title="HACER" /></div>
+	<div class="logo-div"><img class="logo-img" src="http://i.imgur.com/6JREqc2.png" title="Horatio Alger" /></div>
+	<div class="logo-div"><img class="logo-img" src="http://i.imgur.com/BZUYARe.gif" title="KFC" /></div>
+	<div class="logo-div"><img class="logo-img" src="http://i.imgur.com/dv44K0Q.gif" title="Comcast" /></div>
+	<div class="logo-div"><img class="logo-img" src="http://i.imgur.com/DAAz3ND.gif" title="Lowe's" /></div>
+	<div class="logo-div"><img class="logo-img" src="http://i.imgur.com/9rOTCl9.gif" title="Jackie Robinson" /></div>
+	<div class="logo-div"><img class="logo-img" src="http://i.imgur.com/BMoYZWK.gif" title="Questbridge" /></div>
+	<div class="logo-div"><img class="logo-img" src="http://i.imgur.com/zkVYPrs.gif" title="Thiel Fellowship" /></div>
+	<div class="logo-div"><img class="logo-img" src="http://i.imgur.com/dQpzah3.gif" title="Buick Achievers" /></div>
+</div>
+
 <div class="logos">
-<div class="logos-title">
+	<div class="logos-title">
 		<h2 class="logos-text">What students are saying about admithero...</h2>
 	</div>
 	<div class="logos-testimonial">
-		<img class="profile" src="https://googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/kulesza-60.jpg" />
+		<img class="profile" src="http://loremflickr.com/300/300/paris,travel" />
 		<h6>Jane A.</h6>
 		<q>It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.</q>
 		<br/>
@@ -92,7 +140,7 @@
 		<img src="http://loremflickr.com/100/100/cats" alt="Cat photo" />	<img src="http://loremflickr.com/100/100/fashion">
 	</div>
 	<div class="logos-testimonial">
-		<img class="profile" src="https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/esprit-1.jpg" />
+		<img class="profile" src="http://loremflickr.com/300/300/china,travel,landscape" />
 		<h6>Sylvia P.</h6>
 		<q>It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York.</q>
 		<br/>
@@ -100,7 +148,7 @@
 		<img src="http://loremflickr.com/100/100/nature" />	<img src="http://loremflickr.com/100/100/nightlife" />
 	</div>
 	<div class="logos-testimonial">
-		<img class="profile" src="https://98dfb7d47a89c189da3b5dbdf7dde8d956b567eb.googledrive.com/host/0Bx8HaVf33b7rfnBONlFaNllPOVRvYVRXME1vMHM3VFNTMF9BWjdrZkxjTmR1WXB5Rm9CQnc/people/bock-2.jpg" />
+		<img class="profile" src="http://loremflickr.com/300/300/london" />
 		<h6>Italo C.</h6>
 		<q>You are about to begin reading Italo Calvino's new novel, If on a winter's night a traveler.</q>
 		<p><br/>Awards won:</p>
@@ -108,4 +156,7 @@
 	</div>
 </div>
 
+<div id="button-div">
+	<a href=signup class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-button">Interested? Sign up now!</a>
+</div>
 <% end %>
