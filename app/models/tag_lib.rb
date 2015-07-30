@@ -3,4 +3,5 @@ class TagLib < ActiveRecord::Base
                                   				 foreign_key: "tag_id",
                                   				 dependent: :destroy
     has_many :has_articles, through: :passive_article_tag_relationships, source: :article
+    validates :tag, presence: true
 end

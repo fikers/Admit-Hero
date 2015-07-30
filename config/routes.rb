@@ -14,10 +14,11 @@ Rails.application.routes.draw do
 
   resources :users, except: [:edit, :update] do 
     member do
-      get :basic_info, :tags
+      get 'basic_info'
+      get 'tags'
       #basic_info_user_path or basic_info_user_url 
       #tags_user_path or tags_user_url
-      patch :update_tags
+      patch 'update_tags'
     end
     
   end
