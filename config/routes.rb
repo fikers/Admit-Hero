@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'feeds/scholarships'
+
   root 'static_pages#home'
 
   get 'about' => 'static_pages#about'
@@ -11,6 +13,14 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   
   get 'reset' => 'password_resets#new'
+  
+  get 'scholarships' => 'feeds#scholarships'
+  
+  get 'student_profiles' => 'feeds#student_profiles'
+  
+  get 'summer_programs' => 'feeds#summer_programs'
+  
+  get 'tips_and_tricks' => 'feeds#tips_and_tricks'
 
   post 'login' => 'sessions#create'
 

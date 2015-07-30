@@ -47,7 +47,7 @@
      <!--Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer" ></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
-      <a class="mdl-navigation__link" id="font" href="#works">HOW IT WORKS</a>
+      <a class="mdl-navigation__link" id="font" href="#works">HOW IT WORKS PIT</a>
       <a class="mdl-navigation__link" id="getstarted2" href=signup>GET STARTED</a>
       <a class="mdl-navigation__link" id="font" href=login>LOGIN</a>
     </nav>
@@ -104,13 +104,42 @@
         <!--</div>-->
         <!--</div>    -->
         
-            
+        <% if current_page?(scholarships_path) %>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" id="font" href="#">SCHOLARSHIPS</a>
-            <a class="mdl-navigation__link" id="font" href="#">STUDENT PROFILES</a>
-            <a class="mdl-navigation__link" id="font" href="#">SUMMER PROGRAMS</a>
-            <a class="mdl-navigation__link" id="font" href="#">TIPS AND TRICKS</a>
+            <a class="mdl-navigation__link" id="getstarted2" href='/scholarships'>SCHOLARSHIPS</a>
+            <a class="mdl-navigation__link" id="font" href='/student_profiles'>STUDENT PROFILES</a>
+            <a class="mdl-navigation__link" id="font" href='/summer_programs'>SUMMER PROGRAMS</a>
+            <a class="mdl-navigation__link" id="font" href='/tips_and_tricks'>TIPS AND TRICKS</a>
         </nav>
+        <% end %>
+        
+        <% if current_page?(student_profiles_path) %>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" id="font" href='/scholarships'>SCHOLARSHIPS</a>
+            <a class="mdl-navigation__link" id="getstarted2" href='/student_profiles'>STUDENT PROFILES</a>
+            <a class="mdl-navigation__link" id="font" href='/summer_programs'>SUMMER PROGRAMS</a>
+            <a class="mdl-navigation__link" id="font" href='/tips_and_tricks'>TIPS AND TRICKS</a>
+        </nav>
+        <% end %>
+        
+        <% if current_page?(summer_programs_path) %>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" id="font" href='/scholarships'>SCHOLARSHIPS</a>
+            <a class="mdl-navigation__link" id="font" href='/student_profiles'>STUDENT PROFILES</a>
+            <a class="mdl-navigation__link" id="getstarted2" href='/summer_programs'>SUMMER PROGRAMS</a>
+            <a class="mdl-navigation__link" id="font" href='/tips_and_tricks'>TIPS AND TRICKS</a>
+        </nav>
+        <% end %>
+        
+        <% if current_page?(tips_and_tricks_path) %>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" id="font" href='/scholarships'>SCHOLARSHIPS</a>
+            <a class="mdl-navigation__link" id="font" href='/student_profiles'>STUDENT PROFILES</a>
+            <a class="mdl-navigation__link" id="font" href='/summer_programs'>SUMMER PROGRAMS</a>
+            <a class="mdl-navigation__link" id="getstarted2" href='/tips_and_tricks'>TIPS AND TRICKS</a>
+        </nav>
+        <% end %>
+        
         </div>
         <%= link_to "LOGOUT", logout_path, method: "delete", class:"mdl-navigation__link", id:"font2"%>
       <% end %>
@@ -120,4 +149,3 @@
 
 <% end %>
 
-<!--</div>-->
