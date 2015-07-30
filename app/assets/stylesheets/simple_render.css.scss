@@ -125,7 +125,6 @@ textarea {
 }
 
 .example {
-  background-color: white;
   @include flexbox();
   flex-direction: row;
   flex-wrap: wrap;
@@ -217,6 +216,7 @@ textarea {
 
 #scholarship-logos {
   padding: 5vh 10vw;
+  height: 70vh;
   @include flexbox();
   justify-content: center;
   flex-wrap: wrap;
@@ -227,6 +227,15 @@ textarea {
 
   .logo-div {
     width: 20%;
+    height: 20vh;
+    //background-color: cyan;
+  }
+
+  .logo-img {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: auto;
   }
 }
 
@@ -265,8 +274,9 @@ textarea {
 }
 
 .logos {
-  height: 100vh;
+  height: 120vh;
   width: 100%;
+  background-color: #bbdefb;
 
   @include flexbox();
   flex-wrap: wrap;
@@ -274,8 +284,13 @@ textarea {
   align-items: baseline;
 
   .logos-title {
-    @include flex(1 0 100%);
-    padding: 15px;
+    @include flex(0 0 100%);
+    padding: 5% 5% 0;
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: normal;
+      margin: 0 15%; 
+    }
   }
 
   .logos-testimonial {
@@ -308,6 +323,18 @@ textarea {
 
 }
 
+#button-div {
+  @include flexbox();
+  height: 30vh;
+  background-color: #212121;
+  a {
+    display: block;
+    margin: auto;
+    vertical-align: middle;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150%;
+  }
+}
 
 /* typography */
 
