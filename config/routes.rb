@@ -12,6 +12,14 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'sessions#destroy' 
 
+  get 'scholarships' => 'feeds#scholarships'
+  
+  get 'student_profiles' => 'feeds#student_profiles'
+  
+  get 'summer_programs' => 'feeds#summer_programs'
+  
+  get 'tips_and_tricks' => 'feeds#tips_and_tricks'
+
   resources :users, except: [:edit, :update] do 
     member do
       get 'basic_info'
