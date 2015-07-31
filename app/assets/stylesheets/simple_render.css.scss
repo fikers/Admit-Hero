@@ -70,9 +70,12 @@ textarea {
 	resize: vertical;
 }
 
+a:hover {
+  text-decoration: none;
+}
 
 #mouse {
-  background: url('http://i.imgur.com/6gb7yIN.jpg') center / cover;
+  background: url('../assets/student-849827.jpg') center / cover;
   height: 100vh;
   width: 100vw;
 
@@ -101,7 +104,10 @@ textarea {
   }
 
   .create-button {
-    border-radius: 5%;
+    // border-radius: 5%;
+    &:hover {
+      font-style: italic;
+    }
   }
 
   // .sign-up-form {
@@ -130,7 +136,7 @@ textarea {
   justify-content: center;
   align-items: center;
   align-content: flex-start;
-  padding: 4% 12% 5% 12%;
+  padding: 3% 12% 5% 12%;
 
   .divider {
     border-bottom: 1px solid #1976d2;
@@ -180,7 +186,7 @@ textarea {
     height: 50vh;
     word-break: break-word;
     text-align: left;
-    font-family: 'Source Sans Pro', sans-serif;
+    // font-family: 'Source Sans Pro', sans-serif;
     font-weight: light;
     padding-left: 13%;
 
@@ -222,6 +228,9 @@ textarea {
 
   .scholarship-header {
     width: 100%;
+    h2 {
+      color: #212121;
+    }
   }
 
   .logo-div {
@@ -257,6 +266,7 @@ textarea {
     height: 300px;
     text-align: center;
     display: table;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .grid-text {
@@ -265,13 +275,19 @@ textarea {
   }
   
   .cell1 {
-    background: url('http://i.imgur.com/JshkHwE.jpg') center / cover;
+    background: url('http://i.imgur.com/i3BAM4B.jpg') center / cover;
+    .grid-text   {
+      color: #ffffff;
+    }
   }
   .cell2 {
     background: url('http://i.imgur.com/GSWO4Sp.jpg') center / cover;
   }
   .cell3 {
-    background: url('http://i.imgur.com/0z1ouBn.jpg') center / cover;
+    background: url('http://i.imgur.com/6gb7yIN.jpg') center / cover;
+    span {
+      color: #ffffff;
+    }
   }
   .cell4 {
     background: url('http://i.imgur.com/Ylft8XT.jpg') center / cover;
