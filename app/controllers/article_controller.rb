@@ -3,7 +3,7 @@ class ArticleController < ApplicationController
 	before_action :admin_user, except: [:index, :show]
 	
 	def index
-		@articless = Article.paginate(page: params[:page])
+		@articles = Article.paginate(page: params[:page])
 	end
 
 	def show
