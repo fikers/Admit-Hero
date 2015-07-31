@@ -2,16 +2,16 @@
 
 <h1>Article Posting</h1>
 
-<div>
-	<%= form_for(@article) do |f| %>
-		<%= render 'shared/error_messages', object: f.object %>
+<div class="col-md-6">
+	<%= form_for (@article) do |f| %>
+		<%= render 'shared/error_messages_article' %>
 	
-		<div>
+		<div class="mdl-textfield mdl-js-textfield textfield-demo">
 			<%= f.label :title, class: 'mdl-textfield__label' %>
 	    	<%= f.text_field :title, class: 'mdl-textfield__input' %>
 	    </div>
 
-	    <div>
+	    <div class="mdl-textfield mdl-js-textfield textfield-demo">
 	    	<%= f.label :content, class: 'mdl-textfield__label' %>
 	      	<%= f.text_field :content, class: 'mdl-textfield__input' %>
 	    </div>
