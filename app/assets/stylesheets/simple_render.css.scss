@@ -1,5 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@font-face {
+  font-family: "Nexa Light";
+  src: url("../assets/nexa_free_light-webfont.ttf");
+}
 
 
  /* mixins, variables, etc. */
@@ -75,51 +79,51 @@ a:hover {
 }
 
 #mouse {
-  background: url('http://i.imgur.com/0HOyqRr.jpg') center / cover;
+  background: url('../assets/bg3.png') center / cover;
   height: 100vh;
   width: 100vw;
+  padding: 5%;
 
   @include flexbox();
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
-  -webkit-justify-content: center;
+  justify-content: flex-end;
   align-content: center;
-  align-items: center;
+  align-items: flex-start;
   //padding: 100px;
 
   .center-title {
-    background-color: white;
-    opacity: .70;
-    width: 100vw;
-    height: 12%;
+    width: 30vw;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
 
-    h1 {
-      color: #1976d2;
+    h3 {
+      color: #ffffff;
+      font-family: 'Nexa Light', 'Montserrat', sans-serif;
+      text-align: left;
+      font-size: 200%;
     }
   }
 
   .create-button {
-    // border-radius: 5%;
+    width: 35vw;
+    height: 15%;
+    font-size: 200%;
+    background-color: #3d94f6;
+    border-radius: 1em;
+    border: 0.1em solid #337fed;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0.1em 0.1em 0em #1570cd;
+    color: #ffffff;
     &:hover {
-      font-style: italic;
+      background-color: #1e62d0;
+    }
+    &:active {
+      position: relative;
+      top: 0.2em;
     }
   }
-
-  // .sign-up-form {
-  //   //background-color: white;
-  //   width: 85%;
-  //   align-self: flex-start;
-  //   display: flex;
-  //   justify-content: center;
-
-  //   .user-text {
-  //     width: 50%;
-  //   }
 }
 
 
@@ -147,7 +151,7 @@ a:hover {
   .heading {
     width: 100vw;
     text-align: center;
-    padding-bottom: -1vh;
+    // padding-bottom: -1vh;
     h2 {
       font-family: 'Montserrat', sans-serif;
       // font-weight: bold;
@@ -192,7 +196,7 @@ a:hover {
 
     h5, h6 {
       text-align: left;
-      line-height: 60%;
+      // line-height: 60%;
       font-family: 'Montserrat', sans-serif;
       // font-weight: bold;
     }
@@ -221,7 +225,7 @@ a:hover {
 
 #scholarship-logos {
   padding: 5vh 10vw;
-  height: 70vh;
+  height: 90vh;
   @include flexbox();
   justify-content: center;
   flex-wrap: wrap;
@@ -233,17 +237,22 @@ a:hover {
     }
   }
 
-  .logo-div {
-    width: 20%;
-    height: 20vh;
-    //background-color: cyan;
-    .logo-img {
-      height: 100%;
-      width: auto;
-      display: block;
-      margin: auto;
+  .logos-div {
+    background: url('../assets/scholarships_logo_background_1024.png') center / cover;
+    width: 90%;
+    height: 50vh;
   }
-  }
+  // .logo-div {
+  //   width: 20%;
+  //   height: 20vh;
+  //   //background-color: cyan;
+  //   .logo-img {
+  //     height: 100%;
+  //     width: auto;
+  //     display: block;
+  //     margin: auto;
+  //   }
+  // }
 
   .logo-img {
     height: 100%;
