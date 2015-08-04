@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   
   get 'tips_and_tricks' => 'feeds#tips_and_tricks'
   
+  get 'tags' => 'users#tags'
+  
   get 'content' => 'static_pages#content_internship'
 
   post 'login' => 'sessions#create'

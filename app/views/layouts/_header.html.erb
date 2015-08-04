@@ -41,9 +41,9 @@
 <!--<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >-->
 <% if !logged_in? && current_page?(root_url) %>
 
-<header class="custom2  mdl-js-layout mdl-layout--fixed-header" id="header">
-  <div class="mdl-layout__header-row mdl-layout__header" >
-    <span class="mdl-layout-title "><a href="/"><img src="http://i.imgur.com/K8uionZ.png"></a></span>
+<header class="custom2 mdl-js-layout mdl-layout--fixed-header" id="header">
+  <div class="mdl-layout__header-row mdl-layout__header" id="star">
+    <span class="mdl-layout-title"><a href="/"><img src="http://i.imgur.com/K8uionZ.png"></a></span>
      <!--Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer" ></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
@@ -82,11 +82,11 @@
   
 <% else %>
 
-
 <div class="custom3 mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title"><a class="home_link", href='tags' %><img src="../assets/white_logotype256_720.png"/></a></span>
+  <header class="mdl-layout__header" >
+    <div class="mdl-layout__header-row star" >
+      <span class="mdl-layout-title"><%= link_to image_tag("white_logotype256_720.png"), current_user %></span>
+      <!--<span class="mdl-layout-title"><a class="home_link", href="users" %><img src="../assets/white_logotype256_720.png"/></a></span>-->
       <!--<span class="mdl-layout-title"><a class="home_link", href='/' %><img src="http://i.imgur.com/K8uionZ.png"></a></span>-->
       <% if !logged_in? %>
       <div class="mdl-layout-spacer"></div>
