@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get 'summer_programs' => 'feeds#summer_programs'
   
   get 'tips_and_tricks' => 'feeds#tips_and_tricks'
+  
+  get 'content' => 'static_pages#content_internship'
 
   post 'login' => 'sessions#create'
 
