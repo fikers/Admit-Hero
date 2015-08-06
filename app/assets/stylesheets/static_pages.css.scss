@@ -193,7 +193,7 @@
   color: black; }
   
 .profile {
-  max-width: 1200px;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -219,7 +219,7 @@ footer {
   border-top: 1px solid #9C0909;
   color: white;
   small {
-  float: left;
+    float: left;
   }
   ul {
     float: right;
@@ -239,4 +239,29 @@ footer {
       }
     }
   }
+}
+
+
+.about {
+  background-image: url("../assets/bridge.jpg");
+  background-size: cover;
+  height: 400px;
+  margin-top: -30px;
+  border-bottom: 5px solid #9C0909;
+}
+
+.team {
+  background-image: url("../assets/book.jpg");
+  background-size: cover;
+  height: 400px;
+  margin-top: -30px;
+  border-bottom: 5px solid #9C0909;
+}
+
+.contact {
+  background-image: url("../assets/pencil.jpg");
+  background-size: cover;
+  height: 400px;
+  margin-top: -30px;
+  border-bottom: 5px solid #9C0909;
 }

@@ -25,6 +25,10 @@ Rails.application.routes.draw do
   get 'tags' => 'users#tags'
   
   get 'content' => 'static_pages#content_internship'
+  
+  get 'team' => 'static_pages#team'
+  
+  get 'contact' => 'static_pages#contact'
 
   post 'login' => 'sessions#create'
 
