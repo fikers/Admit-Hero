@@ -82,13 +82,14 @@
   
 <% else %>
 
-<div class="custom3 mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header" >
+<div class="mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header custom3" >
     <div class="mdl-layout__header-row star" >
-      <span class="mdl-layout-title"><%= link_to image_tag("white_logotype256_720.png"), current_user %></span>
+      <!--<span class="mdl-layout-title"><%= link_to image_tag("white_logotype256_720.png"), current_user %></span>-->
       <!--<span class="mdl-layout-title"><a class="home_link", href="users" %><img src="../assets/white_logotype256_720.png"/></a></span>-->
       <!--<span class="mdl-layout-title"><a class="home_link", href='/' %><img src="http://i.imgur.com/K8uionZ.png"></a></span>-->
       <% if !logged_in? %>
+      <span class="mdl-layout-title"><a class="home_link", href="/"><img src="../assets/white_logotype256_720.png"></a></span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
         <a class="mdl-navigation__link" id="font" href="/#works">HOW IT WORKS</a>
@@ -96,6 +97,7 @@
         <a class="mdl-navigation__link" id="font" href=login>LOGIN</a>
       </nav>
       <% else %>
+        <span class="mdl-layout-title"><%= link_to image_tag("white_logotype256_720.png"), current_user %></span>
         <div class="middle">
         <!--<div>-->
         <!--<div class="mdl-layout__tab-bar mdl-js-ripple-effect tabs">-->
@@ -139,8 +141,8 @@
         </nav>
         
         <% else %>
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" id="font" href='/scholarships'>SCHOLARSHIPS</a>
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" id="font" href='/scholarships'>SCHOLARSHIPS~</a>
             <a class="mdl-navigation__link" id="font" href='/student_profiles'>STUDENT PROFILES</a>
             <a class="mdl-navigation__link" id="font" href='/summer_programs'>SUMMER PROGRAMS</a>
             <a class="mdl-navigation__link" id="font" href='/tips_and_tricks'>TIPS AND TRICKS</a>
@@ -153,7 +155,11 @@
       <% end %>
     </div>
   </header>
+
+
 </div>
+
+
 
 <% end %>
 
