@@ -204,7 +204,7 @@
 
 .footer {
   width: 100%;
-  height: 250px;
+  min-height: 250px;
   background-color: #9C0909;
 }
 
@@ -270,8 +270,124 @@ footer {
   border-bottom: 5px solid #9C0909;
 }
 
-.mdl-layout__drawer-button {
-  background-color: #9C0909;
+/*homepage formats*/
+.title {
+  background: url('http://i.imgur.com/jcuOIuH.jpg') center / cover;
+  height: 650px;
+  margin-top: 0px;
+  color: white;
+  .cover {
+    vertical-align: center;
+    padding-top: 200px;
+  }
+  .cent {
+    text-align: center;
+    @media screen and (min-width: 400px) {
+       font-size: 2.1em;
+    }
+  }
+  .create-button {
+    width: 100%;
+    // height: 15%;
+    @media screen and (min-width: 400px) {
+       font-size: 2.0em;
+    }
+    @media only screen and (max-width: 400px) {
+    width: 80%;
+    font-size: 0.6em;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    background-color: #3d94f6;
+    border-radius: 1em;
+    border: 0.1em solid #337fed;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0.1em 0.1em 0em #1570cd;
+    color: #ffffff;
+    &:hover {
+      background-color: #1e62d0;
+    }
+    &:active {
+      position: relative;
+      top: 0.2em;
+    }
+  }
+  
 }
 
+.zp {
+  width: 100%;
+  height: 100%;
+
+  @media only screen and (max-width: 400px) {
+  display: none;
+  width: 100%;
+  }
+}
+
+.wide {
+  @media screen and (min-width: 400px) {
+  width: 70%;
+  margin: 0 auto;
+  }
+  h5 {
+      color: #1976d2;
+      font-size: 170%;
+      padding-bottom: 30px;
+    }
+  p {
+    font-size: 110%;
+  }
+  h5, p {
+      text-align: left;
+      // line-height: 60%;
+      font-family: 'Montserrat', sans-serif;
+      // font-weight: bold;
+    }
+  .words {
+      width: 90%;
+      float: left;
+  }   
+  .pic {
+    width: 90%;
+  }
+}
+
+.test {
+  .profile {
+      border-radius: 50%;
+      height: 30vh;
+      width: auto;
+      display: block;
+      margin: auto;
+      
+  }
+  .quote {
+    @media only screen and (max-width: 400px) {
+    width: 100%;
+    }
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  h6 {
+      color: #1976d2;
+      text-align: center;
+  }
+}
+
+.logo {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.logo2 {
+  width: 90%;
+  margin-right: auto;
+  margin-left: 0px;
+}
+  
 
