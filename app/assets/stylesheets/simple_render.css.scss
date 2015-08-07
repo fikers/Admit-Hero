@@ -5,6 +5,9 @@
   src: url("../assets/nexa_free_light-webfont.ttf");
 }
 
+@viewport {
+  width: device-width;
+}
 
  /* mixins, variables, etc. */
 
@@ -42,24 +45,24 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
-@media (max-width: 600px), handheld {
-  .title {
-    font-size: 36px;
-    color: white;
-  }
+// @media (max-width: 600px), handheld {
+//   .title {
+//     font-size: 36px;
+//     color: white;
+//   }
 
-  #mouse {
+//   #mouse {
 
-    .sign-up-form {
-      width: 100vw;
+//     .sign-up-form {
+//       width: 100vw;
 
-      .user-text {
-        width: 100vw;
-      }
+//       .user-text {
+//         width: 100vw;
+//       }
 
-    }
-  }
-}
+//     }
+//   }
+// }
 
 html {
 	overflow-y: scroll;
@@ -81,7 +84,7 @@ a:hover {
 #mouse {
   background: url('http://i.imgur.com/jcuOIuH.jpg') center / cover;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   padding: 5%;
 
   @include flexbox();
@@ -262,47 +265,6 @@ a:hover {
   }
 }
 
-// .grid {
-//   @include flexbox();
-//   flex-direction: row;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   align-items: baseline;
-//   align-content: flex-start;
-
-//   .grid-cell {
-//     width: 50%;
-//     height: 300px;
-//     text-align: center;
-//     display: table;
-//     font-family: 'Montserrat', sans-serif;
-//   }
-
-//   .grid-text {
-//     display: table-cell;
-//     vertical-align: middle;
-//   }
-  
-//   .cell1 {
-//     background: url('http://i.imgur.com/i3BAM4B.jpg') center / cover;
-//     .grid-text   {
-//       color: #ffffff;
-//     }
-//   }
-//   .cell2 {
-//     background: url('http://i.imgur.com/GSWO4Sp.jpg') center / cover;
-//   }
-//   .cell3 {
-//     background: url('http://i.imgur.com/6gb7yIN.jpg') center / cover;
-//     span {
-//       color: #ffffff;
-//     }
-//   }
-//   .cell4 {
-//     background: url('http://i.imgur.com/Ylft8XT.jpg') center / cover;
-//   }
-// }
-
 .logos {
   height: auto;
   width: 100%;
@@ -315,7 +277,7 @@ a:hover {
 
   .logos-title {
     @include flex(0 0 100%);
-    padding: 5% 5% 0;
+    padding: 5%;
     h2 {
       font-family: 'Montserrat', sans-serif;
       font-weight: normal;
@@ -326,13 +288,21 @@ a:hover {
   .logos-testimonial {
     @include order(1);
     @include flex(0 0 20%);
+    @media (orientation : portrait) {
+      @include flex(0 0 100%);
+      padding: 5%;
+    }
 
     .profile {
       border-radius: 50%;
-      height: 30vh;
-      width: auto;
+      height: auto;
+      width: 70%;
       display: block;
       margin: auto;
+      @media (orientation : portrait) {
+        width: 50%;
+        height: auto;
+      }
     }
     h6 {
       color: #1976d2;
@@ -377,6 +347,7 @@ a:hover {
   align-items: flex-end;
   #header-words {
     background-color: rgba(255,255,255,0.7);
+    height: 16%;
     h1 {
       font-family: 'Arapey', Garamond, Georgia, serif;
       color: #333;
