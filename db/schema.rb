@@ -11,16 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150728204930) do
+ActiveRecord::Schema.define(version: 20150729200325) do
 
-  create_table "articles", force: :cascade do |t|
-    t.string   "title"
-    t.string   "content"
+  create_table "article_tag_relationships", force: :cascade do |t|
+    t.integer  "article_id"
+    t.integer  "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "articles", ["title"], name: "index_articles_on_title", unique: true
+  add_index "article_tag_relationships", ["article_id", "tag_id"], name: "index_article_tag_relationships_on_article_id_and_tag_id", unique: true
+  add_index "article_tag_relationships", ["article_id"], name: "index_article_tag_relationships_on_article_id"
+  add_index "article_tag_relationships", ["tag_id"], name: "index_article_tag_relationships_on_tag_id"
+
+  create_table "articles", force: :cascade do |t|
+    t.text     "title"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "basic_infos", force: :cascade do |t|
     t.integer  "user_id"
@@ -30,17 +39,6 @@ ActiveRecord::Schema.define(version: 20150728204930) do
   end
 
   add_index "basic_infos", ["user_id"], name: "index_basic_infos_on_user_id"
-
-  create_table "tag_article_relationships", force: :cascade do |t|
-    t.integer  "tag_id"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "tag_article_relationships", ["article_id"], name: "index_tag_article_relationships_on_article_id"
-  add_index "tag_article_relationships", ["tag_id", "article_id"], name: "index_tag_article_relationships_on_tag_id_and_article_id", unique: true
-  add_index "tag_article_relationships", ["tag_id"], name: "index_tag_article_relationships_on_tag_id"
 
   create_table "tag_libs", force: :cascade do |t|
     t.string   "tag"

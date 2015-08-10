@@ -1,21 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'feeds/scholarships'
-
   root 'static_pages#home'
 
   get 'about' => 'static_pages#about'
 
-  get 'contact' => 'static_pages#team'
-  
-  get 'news' => 'static_pages#news'
-
   get 'signup' => 'users#new'
 
   get 'login' => 'sessions#new'
-  
-  get 'reset' => 'password_resets#new'
-  
+
+  post 'login' => 'sessions#create'
+
+  delete 'logout' => 'sessions#destroy' 
+
   get 'scholarships' => 'feeds#scholarships'
   
   get 'student_profiles' => 'feeds#student_profiles'
@@ -23,34 +19,32 @@ Rails.application.routes.draw do
   get 'summer_programs' => 'feeds#summer_programs'
   
   get 'tips_and_tricks' => 'feeds#tips_and_tricks'
+
+  get 'contact' => 'static_pages#team'
   
+  get 'news' => 'static_pages#news'
+
   get 'tags' => 'users#tags'
   
   get 'content' => 'static_pages#content_internship'
   
   get 'team' => 'static_pages#team'
-  
-  get 'contact' => 'static_pages#contact'
 
-  post 'login' => 'sessions#create'
-
-  delete 'logout' => 'sessions#destroy' 
-
-  resources :users do 
+  resources :users, except: [:edit, :update] do 
     member do
       get :basic_info, :tags
-      #basic_info_user_path or basic_info_user_url
+      #basic_info_user_path or basic_info_user_url 
       #tags_user_path or tags_user_url
       patch :update_tags
     end
-  end 
+    
+  end
 
   resources :account_activations, only: [:edit]
 
   resources :password_resets,     only: [:new, :edit, :create, :update]
 
-
-
+  resources :articles
 
 
   # The priority is based upon order of creation: first created -> highest priority.

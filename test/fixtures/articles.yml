@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  content: MyString
+sample_article1:
+  title: The Sample Article 1
+  content: This is the first article we made to test the functionalities.
 
-two:
-  title: MyString
-  content: MyString
+sample_article2:
+  title: The Sample Article 2 
+  content: This is the second article we made to test the functionalities.
+
+sample_article3:
+  title: The Sample Article 3
+  content: This is the third article we made to test the functionalities.
+
+

@@ -1,7 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  tag: MyString
+tag1:
+  tag: Summer Programs
 
-two:
-  tag: MyString
+tag2:
+  tag: Computer Science
+
+tag3:
+  tag: Internships
