@@ -31,3 +31,14 @@ User.create!(name:  "Web Yan",
                activated: true,
                activated_at: Time.zone.now)
 end
+
+TagLib.create!(tag: "summer_programs")
+TagLib.create!(tag: "scholarships")
+TagLib.create!(tag: "stem")
+TagLib.create!(tag: "humanities")
+TagLib.create!(tag: "computer_science")
+TagLib.create!(tag: "traveling")
+TagLib.create!(tag: "community_service")
+TagLib.create!(tag: "research")
+TagLib.create!(tag: "internships")
+TagLib.create!(tag: "arts")

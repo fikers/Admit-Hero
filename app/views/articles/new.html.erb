@@ -16,6 +16,58 @@
 	      	<%= f.text_field :content, class: 'mdl-textfield__input' %>
 	    </div>
 
+	    <%= fields_for :relevant_tags do |t| %>
+	    	<%= t.label :summer_programs, class: "checkbox inline" do %>
+				<%= t.check_box :summer_programs %>
+				<span>Summer Programs</span>
+			<% end %>
+
+			<%= t.label :scholarships, class: "checkbox inline" do %>
+				<%= t.check_box :scholarships %>
+				<span>Scholarships</span>
+			<% end %>
+			
+			<%= t.label :stem, class: "checkbox inline" do %>
+				<%= t.check_box :stem %>
+				<span>STEM</span>
+			<% end %>
+
+			<%= t.label :humanities, class: "checkbox inline" do %>
+				<%= t.check_box :humanities %>
+				<span>Humanities</span>
+			<% end %>
+
+			<%= t.label :computer_science, class: "checkbox inline" do %>
+				<%= t.check_box :computer_science %>
+				<span>Computer Science</span>
+			<% end %>
+
+			<%= t.label :traveling, class: "checkbox inline" do %>
+				<%= t.check_box :traveling %>
+				<span>Traveling</span>
+			<% end %>
+
+			<%= t.label :community_service, class: "checkbox inline" do %>
+				<%= t.check_box :community_service %>
+				<span>Community Service</span>
+			<% end %>
+
+			<%= t.label :research, class: "checkbox inline" do %>
+				<%= t.check_box :research %>
+				<span>Research</span>
+			<% end %>
+
+			<%= t.label :internships, class: "checkbox inline" do %>
+				<%= t.check_box :internships %>
+				<span>Internships</span>
+			<% end %>
+
+			<%= t.label :arts, class: "checkbox inline" do %>
+				<%= t.check_box :arts %>
+				<span>Arts</span>
+			<% end %>
+		<% end %>
+
 	    <%= f.submit "Post", class: "btn btn-primary" %>
 	<% end %>
 </div>

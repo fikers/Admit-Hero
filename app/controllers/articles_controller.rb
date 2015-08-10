@@ -17,6 +17,12 @@ class ArticlesController < ApplicationController
 	def create
 		@article = Article.new(article_params)
 		if @article.save
+			params[:relevant_tags].each do |key, value|
+				if value == "1" 
+					taglib = TagLib.find_by(tag: key)
+					@article.mark(taglib)
+				end
+			end
 			flash[:success] = "Article Posted"
 			redirect_to @article
 		else
@@ -47,6 +53,7 @@ class ArticlesController < ApplicationController
 	private
 		def article_params
 			params.require(:article).permit(:title, :content)
+
 		end
 
 end
