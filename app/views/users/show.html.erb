@@ -1,11 +1,16 @@
 <%= provide(:title , "Profile") %>
 
-<aside>
-<%= render 'users/profile_side' %>
-</aside>
 
+<div class="top-margin">
+    
 <h1>Account Information</h1>
+<div class="profile">
+<%= render 'users/profile_side' %>
+
 <p>
 <%= @user.name %> <br>
 <%= @user.email %>
 </p>
+
+</div>
+</div>

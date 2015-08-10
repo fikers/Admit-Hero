@@ -1,5 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+@font-face {
+  font-family: "Nexa Light";
+  src: url("../assets/nexa_free_light-webfont.ttf");
+}
 
 
  /* mixins, variables, etc. */
@@ -70,50 +76,56 @@ textarea {
 	resize: vertical;
 }
 
+a:hover {
+  text-decoration: none;
+}
 
 #mouse {
-  background: url('http://i.imgur.com/0HOyqRr.jpg') center / cover;
+  background: url('http://i.imgur.com/jcuOIuH.jpg') center / cover;
   height: 100vh;
   width: 100vw;
+  padding: 5%;
 
   @include flexbox();
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
-  -webkit-justify-content: center;
+  justify-content: flex-end;
   align-content: center;
-  align-items: center;
+  align-items: flex-start;
   //padding: 100px;
 
   .center-title {
-    background-color: white;
-    opacity: .70;
-    width: 100vw;
-    height: 12%;
+    width: 30vw;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
 
-    h1 {
-      color: #1976d2;
+    h3 {
+      color: #ffffff;
+      font-family: 'Nexa Light', 'Montserrat', sans-serif;
+      text-align: left;
+      font-size: 200%;
     }
   }
 
   .create-button {
-    border-radius: 5%;
+    width: 35vw;
+    height: 15%;
+    font-size: 200%;
+    background-color: #3d94f6;
+    border-radius: 1em;
+    border: 0.1em solid #337fed;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0.1em 0.1em 0em #1570cd;
+    color: #ffffff;
+    &:hover {
+      background-color: #1e62d0;
+    }
+    &:active {
+      position: relative;
+      top: 0.2em;
+    }
   }
-
-  // .sign-up-form {
-  //   //background-color: white;
-  //   width: 85%;
-  //   align-self: flex-start;
-  //   display: flex;
-  //   justify-content: center;
-
-  //   .user-text {
-  //     width: 50%;
-  //   }
 }
 
 
@@ -130,7 +142,7 @@ textarea {
   justify-content: center;
   align-items: center;
   align-content: flex-start;
-  padding: 4% 12% 5% 12%;
+  padding: 3% 12% 5% 12%;
 
   .divider {
     border-bottom: 1px solid #1976d2;
@@ -141,7 +153,7 @@ textarea {
   .heading {
     width: 100vw;
     text-align: center;
-    padding-bottom: -1vh;
+    // padding-bottom: -1vh;
     h2 {
       font-family: 'Montserrat', sans-serif;
       // font-weight: bold;
@@ -180,13 +192,13 @@ textarea {
     height: 50vh;
     word-break: break-word;
     text-align: left;
-    font-family: 'Source Sans Pro', sans-serif;
+    // font-family: 'Source Sans Pro', sans-serif;
     font-weight: light;
     padding-left: 13%;
 
     h5, h6 {
       text-align: left;
-      line-height: 60%;
+      // line-height: 60%;
       font-family: 'Montserrat', sans-serif;
       // font-weight: bold;
     }
@@ -215,26 +227,34 @@ textarea {
 
 #scholarship-logos {
   padding: 5vh 10vw;
-  height: 70vh;
+  height: 90vh;
   @include flexbox();
   justify-content: center;
   flex-wrap: wrap;
 
   .scholarship-header {
     width: 100%;
+    h2 {
+      color: #212121;
+    }
   }
 
-  .logo-div {
-    width: 20%;
-    height: 20vh;
-    //background-color: cyan;
-    .logo-img {
-      height: 100%;
-      width: auto;
-      display: block;
-      margin: auto;
+  .logos-div {
+    background: url('http://i.imgur.com/BVsS0MV.png') center / cover;
+    width: 90%;
+    height: 50vh;
   }
-  }
+  // .logo-div {
+  //   width: 20%;
+  //   height: 20vh;
+  //   //background-color: cyan;
+  //   .logo-img {
+  //     height: 100%;
+  //     width: auto;
+  //     display: block;
+  //     margin: auto;
+  //   }
+  // }
 
   .logo-img {
     height: 100%;
@@ -244,39 +264,46 @@ textarea {
   }
 }
 
-.grid {
-  @include flexbox();
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: baseline;
-  align-content: flex-start;
+// .grid {
+//   @include flexbox();
+//   flex-direction: row;
+//   justify-content: center;
+//   flex-wrap: wrap;
+//   align-items: baseline;
+//   align-content: flex-start;
 
-  .grid-cell {
-    width: 50%;
-    height: 300px;
-    text-align: center;
-    display: table;
-  }
+//   .grid-cell {
+//     width: 50%;
+//     height: 300px;
+//     text-align: center;
+//     display: table;
+//     font-family: 'Montserrat', sans-serif;
+//   }
 
-  .grid-text {
-    display: table-cell;
-    vertical-align: middle;
-  }
+//   .grid-text {
+//     display: table-cell;
+//     vertical-align: middle;
+//   }
   
-  .cell1 {
-    background: url('http://i.imgur.com/JshkHwE.jpg') center / cover;
-  }
-  .cell2 {
-    background: url('http://i.imgur.com/GSWO4Sp.jpg') center / cover;
-  }
-  .cell3 {
-    background: url('http://i.imgur.com/0z1ouBn.jpg') center / cover;
-  }
-  .cell4 {
-    background: url('http://i.imgur.com/Ylft8XT.jpg') center / cover;
-  }
-}
+//   .cell1 {
+//     background: url('http://i.imgur.com/i3BAM4B.jpg') center / cover;
+//     .grid-text   {
+//       color: #ffffff;
+//     }
+//   }
+//   .cell2 {
+//     background: url('http://i.imgur.com/GSWO4Sp.jpg') center / cover;
+//   }
+//   .cell3 {
+//     background: url('http://i.imgur.com/6gb7yIN.jpg') center / cover;
+//     span {
+//       color: #ffffff;
+//     }
+//   }
+//   .cell4 {
+//     background: url('http://i.imgur.com/Ylft8XT.jpg') center / cover;
+//   }
+// }
 
 .logos {
   height: 120vh;
@@ -358,7 +385,7 @@ h2 {
 	font-size: 1.2em; 
 	letter-spacing: -1px; 
 	margin-bottom: 30px; 
-	text-align: center; 
+	text-align: left; 
 	font-weight: normal; 
 	color: #777;
 }
@@ -460,7 +487,7 @@ input {
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
-  span {
+  smdl-layout__copan {
     margin-left: 20px;
     font-weight: normal;
   }
