@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   
   get 'tips_and_tricks' => 'feeds#tips_and_tricks'
 
-  get 'contact' => 'static_pages#team'
+  get 'contact' => 'static_pages#contact'
   
   get 'news' => 'static_pages#news'
 
