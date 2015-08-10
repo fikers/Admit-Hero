@@ -2,7 +2,17 @@
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 #font {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  @media only screen and (max-width: 400px) {
+    display:none;
+    }
+}
+
+.mdl-layout-title {
+  @media only screen and (max-width: 400px) {
+    margin-left: -65px;
+  }
+}
 
 .demo-card-wide.mdl-card {
   width: 512px; }
@@ -53,7 +63,7 @@
     text-decoration: none; }
 
 .two {
-  margin-top: 60px; }
+  margin-top: 10px; }
 
 .alert {
   text-align: center;
@@ -127,11 +137,15 @@
     text-decoration: none; }
 
 .start {
+  @media only screen and (max-width: 400px) {
+    width: 90%;
+    padding: 0px 3px 10px 3px;
+  }
   max-width: 400px;
   min-height: 475px;
   margin-left: auto;
   margin-right: auto;
-  padding: 5px 5px 5px 5px;
+  // padding: 5px 5px 5px 5px;
   border-style: solid;
   border-color: #E3E3E3;
   padding: 0px 20px 20px 20px;
@@ -140,7 +154,8 @@
   box-shadow: 5px 5px 5px 5px 5px #888888; }
 
 .col-md-6 {
-  width: 360px; }
+  @media only screen and (min-width: 400px) {
+  width: 360px; }}
 
 #title {
   width: 200px;
@@ -249,6 +264,7 @@ footer {
 .about {
   background-image: url("../assets/bridge.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 400px;
   margin-top: -30px;
   border-bottom: 5px solid #9C0909;
@@ -257,6 +273,7 @@ footer {
 .team {
   background-image: url("../assets/book.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 400px;
   margin-top: -30px;
   border-bottom: 5px solid #9C0909;
@@ -265,6 +282,7 @@ footer {
 .contact {
   background-image: url("../assets/pencil.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 400px;
   margin-top: -30px;
   border-bottom: 5px solid #9C0909;
@@ -328,7 +346,7 @@ footer {
 }
 
 .wide {
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 800px) {
   width: 70%;
   margin: 0 auto;
   }
@@ -347,8 +365,10 @@ footer {
       // font-weight: bold;
     }
   .words {
+      @media screen and (min-width: 800px) {
       width: 90%;
       float: left;
+      }
   }   
   .pic {
     width: 90%;
@@ -390,4 +410,14 @@ footer {
   margin-left: 0px;
 }
   
+.mobile {
+  top: 5px;
+}
 
+#fonter {
+  font-family: Montserrat;
+  margin-right: -25px;
+  @media only screen and (min-width: 400px) {
+    display:none;
+  }
+}
