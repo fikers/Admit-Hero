@@ -33,6 +33,7 @@ class ArticlesController < ApplicationController
 
 	def edit
 		@article = Article.find(params[:id])
+		@tags = @article.has_tags
 	end
 
 	def update

@@ -20,6 +20,13 @@
           <%= f.text_field :content, class: 'mdl-textfield__input' %>
       </div>
 
+      <h3>
+        Current tags <br>
+        <% @tags.each do |taglib| %>
+          <%= taglib.tag %>
+        <% end %>
+      </h3>
+
       <%= fields_for :relevant_tags do |t| %>
         <%= t.label :summer_programs, class: "checkbox inline" do %>
         <%= t.check_box :summer_programs %>
