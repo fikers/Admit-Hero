@@ -5,6 +5,7 @@ class Article < ActiveRecord::Base
     has_many :has_tags, through: :active_article_tag_relationships, source: :tag
     validates :title, presence: true
     validates :content, presence: true
+    validates :description, presence: true
 
     def mark(tag)
     	active_article_tag_relationships.create(tag_id: tag.id)

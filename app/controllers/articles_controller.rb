@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@tags = @article.has_tags
 	end
 
 	def new
@@ -37,6 +38,14 @@ class ArticlesController < ApplicationController
 	def update
 		@article = Article.find(params[:id])
 		if @article.update_attributes(article_params)
+			params[:relevant_tags].each do |key, value|
+				taglib = TagLib.find_by(tag: key)
+				if value == "1" && !@article.has_tags.include?(taglib)
+					@article.mark(taglib)
+				elsif value == "0" && @article.has_tags.include?(taglib)
+					@article.unmark(taglib)
+				end
+			end
 			flash[:success] = "Article Updated"
 			redirect_to @article
 		else 
@@ -52,7 +61,7 @@ class ArticlesController < ApplicationController
 
 	private
 		def article_params
-			params.require(:article).permit(:title, :content)
+			params.require(:article).permit(:title, :content, :description)
 
 		end
 
