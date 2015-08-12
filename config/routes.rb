@@ -30,6 +30,10 @@ Rails.application.routes.draw do
   
   get 'team' => 'static_pages#team'
 
+  get 'articles' => 'articles#index'
+
+  get 'newpost' => 'articles#new'
+
   resources :users, except: [:edit, :update] do 
     member do
       get :basic_info, :tags

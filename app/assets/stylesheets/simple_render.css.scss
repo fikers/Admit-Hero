@@ -44,26 +44,6 @@ $large: 1200px;
   order: $val;
 }
 
-/* universal */
-
-// @media (max-width: 600px), handheld {
-//   .title {
-//     font-size: 36px;
-//     color: white;
-//   }
-
-//   #mouse {
-
-//     .sign-up-form {
-//       width: 100vw;
-
-//       .user-text {
-//         width: 100vw;
-//       }
-
-//     }
-//   }
-// }
 
 html {
 	overflow-y: scroll;
@@ -515,4 +495,21 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+/* New Article */
+
+.articles {
+  @media only screen and (max-width: 400px) {
+    width: 90%;
+    padding: 0px 3px 10px 3px;
+  }
+  width: 70%;
+  margin: auto;
+  min-height: 475px;
+  border: 1px solid #e3e3e3;
+  padding: 0px 20px 20px 20px;
+  overflow: auto;
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px 5px 5px #888888;
 }
