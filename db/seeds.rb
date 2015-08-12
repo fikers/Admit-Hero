@@ -42,3 +42,30 @@ TagLib.create!(tag: "community_service")
 TagLib.create!(tag: "research")
 TagLib.create!(tag: "internships")
 TagLib.create!(tag: "arts")
+
+Article.create!(title: "First Article",
+				description: "description 1",
+				content: "This is the 1st article.")
+Article.create!(title: "second Article",
+				description: "description 2",
+				content: "This is the 2nd article.")
+Article.create!(title: "Third Article",
+				description: "description 3",
+				content: "This is the 3rd article.")
+
+ArticleTagRelationship.create!(article_id: 1,
+								tag_id: 1)
+ArticleTagRelationship.create!(article_id: 1,
+								tag_id: 2)
+ArticleTagRelationship.create!(article_id: 2,
+								tag_id: 3)
+ArticleTagRelationship.create!(article_id: 3,
+								tag_id: 1)
+ArticleTagRelationship.create!(article_id: 3,
+								tag_id: 3)
+
+
+
+
+
+

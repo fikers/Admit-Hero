@@ -31,3 +31,15 @@ end
 		<% end %>
 	</div>
 </div>
+
+@articles  = {}
+  	current_user.tag.each do |key, value|
+  		if value == true 
+  			tag = TagLib.find_by(tag: key)
+  			tag.has_articles.each do |article|
+  				unless @articles.include?(article)
+  					@articles.push(article)
+  				end
+  			end
+  		end
+  	end

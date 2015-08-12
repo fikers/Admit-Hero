@@ -2,7 +2,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 #font {
-<<<<<<< HEAD
   font-family: 'Montserrat', sans-serif;
   @media only screen and (max-width: 400px) {
     display:none;
@@ -14,9 +13,6 @@
     margin-left: -65px;
   }
 }
-=======
-  font-family: 'Montserrat', sans-serif; }
->>>>>>> back-branch
 
 .demo-card-wide.mdl-card {
   width: 512px; }
@@ -67,11 +63,7 @@
     text-decoration: none; }
 
 .two {
-<<<<<<< HEAD
   margin-top: 10px; }
-=======
-  margin-top: 60px; }
->>>>>>> back-branch
 
 .alert {
   text-align: center;
@@ -145,22 +137,15 @@
     text-decoration: none; }
 
 .start {
-<<<<<<< HEAD
   @media only screen and (max-width: 400px) {
     width: 90%;
     padding: 0px 3px 10px 3px;
   }
-=======
->>>>>>> back-branch
   max-width: 400px;
   min-height: 475px;
   margin-left: auto;
   margin-right: auto;
-<<<<<<< HEAD
   // padding: 5px 5px 5px 5px;
-=======
-  padding: 5px 5px 5px 5px;
->>>>>>> back-branch
   border-style: solid;
   border-color: #E3E3E3;
   padding: 0px 20px 20px 20px;
@@ -169,12 +154,8 @@
   box-shadow: 5px 5px 5px 5px 5px #888888; }
 
 .col-md-6 {
-<<<<<<< HEAD
   @media only screen and (min-width: 400px) {
   width: 360px; }}
-=======
-  width: 360px; }
->>>>>>> back-branch
 
 #title {
   width: 200px;
@@ -238,11 +219,7 @@
 
 .footer {
   width: 100%;
-<<<<<<< HEAD
   min-height: 250px;
-=======
-  height: 250px;
->>>>>>> back-branch
   background-color: #9C0909;
 }
 
@@ -287,10 +264,7 @@ footer {
 .about {
   background-image: url("../assets/bridge.jpg");
   background-size: cover;
-<<<<<<< HEAD
   background-repeat: no-repeat;
-=======
->>>>>>> back-branch
   height: 400px;
   margin-top: -30px;
   border-bottom: 5px solid #9C0909;
@@ -299,10 +273,7 @@ footer {
 .team {
   background-image: url("../assets/book.jpg");
   background-size: cover;
-<<<<<<< HEAD
   background-repeat: no-repeat;
-=======
->>>>>>> back-branch
   height: 400px;
   margin-top: -30px;
   border-bottom: 5px solid #9C0909;
@@ -311,16 +282,12 @@ footer {
 .contact {
   background-image: url("../assets/pencil.jpg");
   background-size: cover;
-<<<<<<< HEAD
   background-repeat: no-repeat;
-=======
->>>>>>> back-branch
   height: 400px;
   margin-top: -30px;
   border-bottom: 5px solid #9C0909;
 }
 
-<<<<<<< HEAD
 /*homepage formats*/
 .title {
   background: url('http://i.imgur.com/jcuOIuH.jpg') center / cover;
@@ -454,10 +421,3 @@ footer {
     display:none;
   }
 }
-=======
-.mdl-layout__drawer-button {
-  background-color: #9C0909;
-}
-
-
->>>>>>> back-branch

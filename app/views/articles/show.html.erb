@@ -2,6 +2,15 @@
 
 
 <h1><%= @article.title %></h1>
+<h3>
+	<% @tags.each do |taglib| %>
+		<%= taglib.tag %>
+	<% end %>
+</h3>
+
+<p>
+<%= @article.description %>
+</p>
 
 <p>
 <%= @article.content %>
