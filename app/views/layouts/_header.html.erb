@@ -137,10 +137,14 @@
      <!--Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer" ></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
+      <% if logged_in? %>
+           <%= link_to "LOGOUT", logout_path, method: "delete", class:"mdl-navigation__link", id:"font"%>
+      <% else %>
       <a class="mdl-navigation__link" id="font" href="/#works">HOW IT WORKS</a>
       <a class="mdl-navigation__link" id="getstarted" href=signup>GET STARTED</a>
       <a class="mdl-navigation__link" id="fonter" href=login>LOGIN</a>
       <a class="mdl-navigation__link" id="font" href=login>LOGIN</a>
+      <% end %>
     </nav>
   </div>
 </header>
