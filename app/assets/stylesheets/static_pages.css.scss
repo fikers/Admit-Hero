@@ -421,3 +421,12 @@ footer {
     display:none;
   }
 }
+
+pre {
+  background: none;
+  border: none;
+  span {
+  font-family: 'Montserrat';
+  text-wrap: break-word;
+  }
+}
