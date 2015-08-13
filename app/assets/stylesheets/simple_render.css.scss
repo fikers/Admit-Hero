@@ -517,3 +517,40 @@ input {
     width: 100%;
   }
 }
+
+/* Select tags */
+
+#tags-header {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.select-tags {
+  @media only screen and (max-width: 400px) {
+    width: 95%;
+    padding: 0px 3px 10px 3px;
+  }
+  width: 50%;
+  margin: auto;
+  padding: 3% 0%;
+
+  .tags-column {
+    width: 50%;
+    float: left;
+    padding-bottom: 7%;
+    @media only screen and (max-width: 560px) {
+      width: 100%;
+      margin: auto;
+    }
+
+    .mdl-checkbox__label {
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .column-one {
+    @media (max-width: 560px) {
+      padding-bottom: 0%;
+    }
+  }
+
+}

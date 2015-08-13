@@ -4,60 +4,65 @@
 <%= render 'users/profile_side' %>
 </aside>
 
-<h1>Tags</h1>
+<h1 id="tags-header">Tags</h1>
 	
 <div class="row">
-   <div class="col-md-6 col-md-offset-3">
+   <div class="select-tags">
 		<%= form_for @tags, url: update_tags_user_path do |f| %>
-			<%= f.label :summer_programs, class: "checkbox inline" do %>
-				<%= f.check_box :summer_programs %>
-				<span>Summer Programs</span>
-			<% end %>
-
-			<%= f.label :scholarships, class: "checkbox inline" do %>
-				<%= f.check_box :scholarships %>
-				<span>Scholarships</span>
-			<% end %>
 			
-			<%= f.label :stem, class: "checkbox inline" do %>
-				<%= f.check_box :stem %>
-				<span>STEM</span>
-			<% end %>
+			<div class="tags-column column-one">
+				<%= f.label :summer_programs, class: "mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" do %>
+					<%= f.check_box :summer_programs, class: "mdl-checkbox__input" %>
+					<span class="mdl-checkbox__label">Summer Programs</span>
+				<% end %>
+	
+				<%= f.label :scholarships, class: "mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" do %>
+					<%= f.check_box :scholarships, class: "mdl-checkbox__input" %>
+					<span class="mdl-checkbox__label">Scholarships</span>
+				<% end %>
+				
+				<%= f.label :stem, class: "mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" do %>
+					<%= f.check_box :stem, class: "mdl-checkbox__input" %>
+					<span class="mdl-checkbox__label">STEM</span>
+				<% end %>
+	
+				<%= f.label :humanities, class: "mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" do %>
+					<%= f.check_box :humanities, class: "mdl-checkbox__input" %>
+					<span class="mdl-checkbox__label">Humanities</span>
+				<% end %>
+	
+				<%= f.label :computer_science, class: "inline mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" do %>
+					<%= f.check_box :computer_science, class: "mdl-checkbox__input" %>
+					<span class="mdl-checkbox__label">Computer Science</span>
+				<% end %>
+			</div>
 
-			<%= f.label :humanities, class: "checkbox inline" do %>
-				<%= f.check_box :humanities %>
-				<span>Humanities</span>
-			<% end %>
+			<div class="tags-column">
+				<%= f.label :traveling, class: "inline mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" do %>
+					<%= f.check_box :traveling, class: "mdl-checkbox__input" %>
+					<span class="mdl-checkbox__label">Traveling</span>
+				<% end %>
 
-			<%= f.label :computer_science, class: "checkbox inline" do %>
-				<%= f.check_box :computer_science %>
-				<span>Computer Science</span>
-			<% end %>
-
-			<%= f.label :traveling, class: "checkbox inline" do %>
-				<%= f.check_box :traveling %>
-				<span>Traveling</span>
-			<% end %>
-
-			<%= f.label :community_service, class: "checkbox inline" do %>
-				<%= f.check_box :community_service %>
-				<span>Community Service</span>
-			<% end %>
-
-			<%= f.label :research, class: "checkbox inline" do %>
-				<%= f.check_box :research %>
-				<span>Research</span>
-			<% end %>
-
-			<%= f.label :internships, class: "checkbox inline" do %>
-				<%= f.check_box :internships %>
-				<span>Internships</span>
-			<% end %>
-
-			<%= f.label :arts, class: "checkbox inline" do %>
-				<%= f.check_box :arts %>
-				<span>Arts</span>
-			<% end %>
+				<%= f.label :community_service, class: "inline mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" do %>
+					<%= f.check_box :community_service, class: "mdl-checkbox__input" %>
+					<span class="mdl-checkbox__label">Community Service</span>
+				<% end %>
+	
+				<%= f.label :research, class: "inline mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" do %>
+					<%= f.check_box :research, class: "mdl-checkbox__input" %>
+					<span class="mdl-checkbox__label">Research</span>
+				<% end %>
+	
+				<%= f.label :internships, class: "inline mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" do %>
+					<%= f.check_box :internships, class: "mdl-checkbox__input" %>
+					<span class="mdl-checkbox__label">Internships</span>
+				<% end %>
+	
+				<%= f.label :arts, class: "inline mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" do %>
+					<%= f.check_box :arts, class: "mdl-checkbox__input" %>
+					<span class="mdl-checkbox__label">Arts</span>
+				<% end %>
+			</div>
 
 			<%= f.submit "Update", class: "btn btn-primary" %>
 		<% end %>
