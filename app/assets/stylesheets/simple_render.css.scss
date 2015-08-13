@@ -323,13 +323,18 @@ a:hover {
   }
 }
 
-/* contact */
+/* Team */
+#team-page {
+  margin: 0px;
+}
+
 #header-pic {
   background: url('http://i.imgur.com/vrekjPt.jpg') center / cover;
   width: 100%;
   margin-top: -30px;
   height: 70vh;
   position: relative;
+  padding-top: 0%;
   #header-words {
     background-color: rgba(255,255,255,0.7);
     position: absolute;
@@ -339,6 +344,7 @@ a:hover {
       color: #333;
       text-transform: capitalize;
       line-height: 0.95;
+      font-size: 66px;
     }
   }
 }
