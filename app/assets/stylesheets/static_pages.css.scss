@@ -306,9 +306,9 @@ footer {
   }
   .create-button {
     width: 100%;
-    // height: 15%;
+    // font-size: 2.0em;
     @media screen and (min-width: 400px) {
-       font-size: 2.0em;
+      font-size: 2.0em;
     }
     @media only screen and (max-width: 400px) {
       width: 80%;
@@ -329,7 +329,7 @@ footer {
     }
     &:active {
       position: relative;
-      top: 0.2em;
+      // top: 0.2em;
     }
   }
   
@@ -419,5 +419,14 @@ footer {
   margin-right: -25px;
   @media only screen and (min-width: 400px) {
     display:none;
+  }
+}
+
+pre {
+  background: none;
+  border: none;
+  span {
+  font-family: 'Montserrat';
+  text-wrap: break-word;
   }
 }
