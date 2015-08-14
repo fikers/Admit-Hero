@@ -537,8 +537,8 @@ input {
 
 .select-tags {
   @media only screen and (max-width: 400px) {
-    width: 95%;
-    padding: 0px 3px 10px 3px;
+    width: 90%;
+    margin: auto;
   }
   width: 50%;
   margin: auto;
@@ -548,7 +548,7 @@ input {
     width: 50%;
     float: left;
     padding-bottom: 7%;
-    @media only screen and (max-width: 560px) {
+    @media only screen and (max-width: 720px) {
       width: 100%;
       margin: auto;
     }
@@ -559,7 +559,7 @@ input {
   }
 
   .column-one {
-    @media (max-width: 560px) {
+    @media (max-width: 720px) {
       padding-bottom: 0%;
     }
   }
