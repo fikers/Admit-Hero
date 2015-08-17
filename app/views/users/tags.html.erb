@@ -1,12 +1,15 @@
 <%= provide(:title , "Profile") %>
 
-<aside>
-<%= render 'users/profile_side' %>
-</aside>
+<div class="top-margin">
 
 <h1 id="tags-header">What are you interested in?</h1>
-	
-<div class="row">
+
+<div class="profile">
+<div class="w3-row">
+<%= render 'users/profile_side' %>
+
+
+<div class="w3-container">
    <div class="select-tags">
 		<%= form_for @tags, url: update_tags_user_path do |f| %>
 			
@@ -67,6 +70,10 @@
 			<%= f.submit "Update", class: "btn btn-primary" %>
 		<% end %>
 	</div>
+</div>
+
+</div>
+</div>
 </div>
 
 

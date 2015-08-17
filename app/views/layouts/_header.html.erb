@@ -138,7 +138,11 @@
     <div class="mdl-layout-spacer" ></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
       <% if logged_in? %>
+           <%= link_to "SETTINGS", basic_info_user_path(current_user), class:"mdl-navigation__link", id:"font" %>
            <%= link_to "LOGOUT", logout_path, method: "delete", class:"mdl-navigation__link", id:"font"%>
+           
+           <%= link_to "SETTINGS", basic_info_user_path(current_user), class:"mdl-navigation__link", id:"fonter" %>
+           <%= link_to "LOGOUT", logout_path, method: "delete", class:"mdl-navigation__link", id:"fonter"%>
       <% else %>
       <a class="mdl-navigation__link" id="font" href="/#works">HOW IT WORKS</a>
       <a class="mdl-navigation__link" id="getstarted" href=signup>GET STARTED</a>

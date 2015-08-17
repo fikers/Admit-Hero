@@ -6,7 +6,13 @@
 <!--<link rel="stylesheet" href="w3.css">-->
 
 <% if logged_in? %>
+<div>
+	<p>Welcome to Admit Hero</p>
+</div>
 <p>tree</p>
+<%= link_to "Basic Information", basic_info_user_path(current_user) %>
+
+
 
 <% else %>
 
