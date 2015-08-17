@@ -5,17 +5,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!--<link rel="stylesheet" href="w3.css">-->
 
-<%# if logged_in? %>
-<!-- <p>tree</p> -->
+<% if logged_in? %>
+<div>
+	<p>Welcome to Admit Hero</p>
+</div>
+<p>tree</p>
+<%= link_to "Basic Information", basic_info_user_path(current_user) %>
 
-<%# else %>
+
+
+<% else %>
 
 <div class="title">
 	<div class="w3-row cover">
 	<div class="w3-third"><p></p></div>
     <div class="w3-third">
 		<h3 class="cent">We're not the super hero you've been looking for, we're the Admit Hero you need.</h3>
-		<button type="button" class="create-button" href="#">Take me on a Journey2</a>
+		<button type="button" class="create-button" href="#">Take me on a Journey</a>
 	</div>
 	<div class="w3-third"><p></p></div>
 	</div>
@@ -131,4 +137,4 @@
 
 <div>Tell me this number: 348</div>
 
-<%# end %>
+<% end %>

@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   get 'articles' => 'articles#index'
 
   get 'newpost' => 'articles#new'
+  
+  get 'settings' => 'users#basic_info'
 
   resources :users, except: [:edit, :update] do 
     member do
