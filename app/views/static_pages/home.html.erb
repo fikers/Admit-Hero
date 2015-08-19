@@ -5,8 +5,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <% if logged_in? %>
-<p>tree</p>
-
+	feeds comming soon<br><br>
+	<div>
+	<% @usertags.each do |tag| %>
+		<div>
+		<%= tag.tag %><%= ":" %><br>
+		<% tag.has_articles.each do |article| %>
+			<%= link_to article.title, article_path(article) %><br>
+			<%= article.description %><br><br>
+		<% end %>
+		</div>
+		<br><br>
+	<% end %>
+	</div>
 <% else %>
 
 <div class="title">
