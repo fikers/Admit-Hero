@@ -35,6 +35,10 @@ Rails.application.routes.draw do
   get 'newpost' => 'articles#new'
   
   get 'settings' => 'users#basic_info'
+  
+  get 'collaboration' => 'static_pages#collaboration'
+  
+  get 'press' => 'static_pages#press'
 
   resources :users, except: [:edit, :update] do 
     member do

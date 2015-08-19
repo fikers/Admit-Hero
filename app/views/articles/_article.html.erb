@@ -1,9 +1,11 @@
 <li>
     <%= link_to article.title, article %>
+    <%= link_to article.description, article %>
 
     <% if current_user.admin?  %>
     	| <%= link_to "edit", edit_article_path(article) %>
         | <%= link_to "delete", article, method: :delete,
                                       data: { confirm: "You sure?" } %>
 	<% end %>
+	
 </li>
