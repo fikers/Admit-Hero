@@ -37,6 +37,6 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 # ruby '2.0.0'
