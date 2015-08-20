@@ -211,6 +211,9 @@
   color: black; }
   
 .profile {
+  @media only screen and (max-width:400px) {
+    max-width: 90%;
+  }
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -433,7 +436,7 @@ pre {
   border: none;
   span {
   font-family: 'Montserrat';
-  text-wrap: break-word;
+  word-break: break-word;
   }
 }
 
