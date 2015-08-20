@@ -22,7 +22,7 @@ User.create!(name:  "Web Yan",
 
 48.times do |n|
   name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
+  email = Faker::Internet.email
   password = "password"
   User.create!(name:  name,
                email: email,
