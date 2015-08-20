@@ -5,11 +5,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <% if logged_in? %>
-	feeds comming soon<br><br>
+	<div>
 	<% @articles.each do |article| %>
+		<div>
 		<%= link_to article.title, article_path(article) %><br>
 		<%= article.description %><br><br>
+		</div>
 	<% end %>
+	</div>
 
 <% else %>
 
