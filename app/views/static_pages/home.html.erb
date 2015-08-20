@@ -6,18 +6,11 @@
 
 <% if logged_in? %>
 	feeds comming soon<br><br>
-	<div>
-	<% @usertags.each do |tag| %>
-		<div>
-		<%= tag.tag %><%= ":" %><br>
-		<% tag.has_articles.each do |article| %>
-			<%= link_to article.title, article_path(article) %><br>
-			<%= article.description %><br><br>
-		<% end %>
-		</div>
-		<br><br>
+	<% @articles.each do |article| %>
+		<%= link_to article.title, article_path(article) %><br>
+		<%= article.description %><br><br>
 	<% end %>
-	</div>
+
 <% else %>
 
 <div class="title">
