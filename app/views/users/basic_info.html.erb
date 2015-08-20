@@ -1,15 +1,21 @@
 <%= provide(:title , "Profile") %>
 
-<aside>
+<div class="top-margin">
+<h1>Settings</h1>
+
+<div class="profile">
+<div class="w3-row">
 <%= render 'users/profile_side' %>
-</aside>
 
-<h1>Basic Information</h1>
+<div class="w3-container w3-half" style="margin-top:4px">
+	Name: <%= @user.name %> <br>
+	Email: <%= @user.email %> <br>
+	Birthday: <br>
+	Gender: <br>
+	School: <br>
+</div>	
 
-<p>	
-	<%= @user.name %> <br>
-	<%= @user.email %> <br>
-	birthday <br>
-	gender <br>
-	school
-</p>
+</div>
+</div>
+</div>
+

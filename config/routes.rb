@@ -20,6 +20,26 @@ Rails.application.routes.draw do
   
   get 'tips_and_tricks' => 'feeds#tips_and_tricks'
 
+  get 'contact' => 'static_pages#contact'
+  
+  get 'news' => 'static_pages#news'
+
+  get 'tags' => 'users#tags'
+  
+  get 'content' => 'static_pages#content_internship'
+  
+  get 'team' => 'static_pages#team'
+
+  get 'articles' => 'articles#index'
+
+  get 'newpost' => 'articles#new'
+  
+  get 'settings' => 'users#basic_info'
+  
+  get 'collaboration' => 'static_pages#collaboration'
+  
+  get 'press' => 'static_pages#press'
+
   resources :users, except: [:edit, :update] do 
     member do
       get :basic_info, :tags
@@ -35,9 +55,6 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :edit, :create, :update]
 
   resources :articles
-
-
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.

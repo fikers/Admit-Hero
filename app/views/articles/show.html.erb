@@ -1,17 +1,24 @@
 <%= provide(:title , 'Article') %>
 
+<div class="top-margin profile article">
 
 <h1><%= @article.title %></h1>
-<h3>
-	<% @tags.each do |taglib| %>
-		<%= taglib.tag %>
-	<% end %>
-</h3>
+<!--<h3>-->
+<!--	<% @tags.each do |taglib| %>-->
+<!--		<%= taglib.tag %>-->
+<!--	<% end %>-->
+<!--</h3>-->
 
-<p>
-<%= @article.description %>
-</p>
+<!--<p>-->
+<!--<%= @article.description %>-->
+<!--</p>-->
 
-<p>
-<%= @article.content %>
-</p>
+
+<!--<p>-->
+<pre>
+<span class="nob">
+<%= @article.content.html_safe %>
+</span>
+</pre>
+<!--</p>-->
+</div>

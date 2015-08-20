@@ -104,7 +104,7 @@
 
 <header class="custom2">
   <div class="mdl-layout__header-row mdl-layout__header" id="star">
-    <span class="mdl-layout-title"><a href="/"><img src="http://i.imgur.com/K8uionZ.png"></a></span>
+    <span class="mdl-layout-title"><a href="/"><img src="../assets/yellow_logotype1024.png"></a></span>
      <!--Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer" ></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
@@ -117,7 +117,7 @@
 
 <header class="custom4">
   <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title" style="color:white"><a href="/"><img src="http://i.imgur.com/K8uionZ.png"></a></span>
+    <span class="mdl-layout-title" style="color:white"><a href="/"><img src="../assets/yellow_logotype1024.png"></a></span>
      <!--Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer" ></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
@@ -133,12 +133,16 @@
 
 <header class="">
   <div class="mdl-layout__header-row mdl-layout__header" id="star">
-    <span class="mdl-layout-title"><a href="/"><img src="http://i.imgur.com/K8uionZ.png"></a></span>
+    <span class="mdl-layout-title"><a href="/"><img src="../assets/yellow_logotype1024.png"></a></span>
      <!--Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer" ></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only" >
       <% if logged_in? %>
+           <%= link_to "SETTINGS", basic_info_user_path(current_user), class:"mdl-navigation__link", id:"font" %>
            <%= link_to "LOGOUT", logout_path, method: "delete", class:"mdl-navigation__link", id:"font"%>
+           
+           <%= link_to "SETTINGS", basic_info_user_path(current_user), class:"mdl-navigation__link", id:"fonter" %>
+           <%= link_to "LOGOUT", logout_path, method: "delete", class:"mdl-navigation__link", id:"fonter"%>
       <% else %>
       <a class="mdl-navigation__link" id="font" href="/#works">HOW IT WORKS</a>
       <a class="mdl-navigation__link" id="getstarted" href=signup>GET STARTED</a>

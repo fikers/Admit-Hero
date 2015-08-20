@@ -11,6 +11,8 @@
  /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$small: 420px;
+$large: 1200px;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -42,31 +44,10 @@ $gray-medium-light: #eaeaea;
   order: $val;
 }
 
-/* universal */
-
-@media (max-width: 600px), handheld {
-  .title {
-    font-size: 36px;
-    color: white;
-  }
-
-  #mouse {
-
-    .sign-up-form {
-      width: 100vw;
-
-      .user-text {
-        width: 100vw;
-      }
-
-    }
-  }
-}
 
 html {
 	overflow-y: scroll;
 }
-
 
 section {
     overflow: auto;
@@ -83,7 +64,7 @@ a:hover {
 #mouse {
   background: url('http://i.imgur.com/jcuOIuH.jpg') center / cover;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   padding: 5%;
 
   @include flexbox();
@@ -270,49 +251,8 @@ a:hover {
   }
 }
 
-// .grid {
-//   @include flexbox();
-//   flex-direction: row;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   align-items: baseline;
-//   align-content: flex-start;
-
-//   .grid-cell {
-//     width: 50%;
-//     height: 300px;
-//     text-align: center;
-//     display: table;
-//     font-family: 'Montserrat', sans-serif;
-//   }
-
-//   .grid-text {
-//     display: table-cell;
-//     vertical-align: middle;
-//   }
-  
-//   .cell1 {
-//     background: url('http://i.imgur.com/i3BAM4B.jpg') center / cover;
-//     .grid-text   {
-//       color: #ffffff;
-//     }
-//   }
-//   .cell2 {
-//     background: url('http://i.imgur.com/GSWO4Sp.jpg') center / cover;
-//   }
-//   .cell3 {
-//     background: url('http://i.imgur.com/6gb7yIN.jpg') center / cover;
-//     span {
-//       color: #ffffff;
-//     }
-//   }
-//   .cell4 {
-//     background: url('http://i.imgur.com/Ylft8XT.jpg') center / cover;
-//   }
-// }
-
 .logos {
-  height: 120vh;
+  height: auto;
   width: 100%;
   background-color: #bbdefb;
 
@@ -323,7 +263,7 @@ a:hover {
 
   .logos-title {
     @include flex(0 0 100%);
-    padding: 5% 5% 0;
+    padding: 5%;
     h2 {
       font-family: 'Montserrat', sans-serif;
       font-weight: normal;
@@ -334,13 +274,21 @@ a:hover {
   .logos-testimonial {
     @include order(1);
     @include flex(0 0 20%);
+    @media (orientation : portrait) {
+      @include flex(0 0 100%);
+      padding: 5%;
+    }
 
     .profile {
       border-radius: 50%;
-      height: 30vh;
-      width: auto;
+      height: auto;
+      width: 70%;
       display: block;
       margin: auto;
+      @media (orientation : portrait) {
+        width: 50%;
+        height: auto;
+      }
     }
     h6 {
       color: #1976d2;
@@ -371,6 +319,53 @@ a:hover {
     vertical-align: middle;
     font-family: 'Montserrat', sans-serif;
     font-size: 150%;
+  }
+}
+
+/* Team */
+#team-page {
+  margin: 0px;
+}
+
+.two {
+  margin: 0px;
+  padding: 0px;
+}
+
+#header-pic {
+  // background: url('http://i.imgur.com/vrekjPt.jpg') center / cover;
+  width: 100%;
+  margin-top: -30px;
+  height: 70vh;
+  position: relative;
+  padding-top: 0%;
+  #header-words {
+    background-color: rgba(255,255,255,0.7);
+    position: absolute;
+    bottom: 0;
+    h1 {
+      font-family: 'Arapey', Garamond, Georgia, serif;
+      color: #333;
+      text-transform: capitalize;
+      line-height: 0.95;
+      font-size: 66px;
+    }
+  }
+}
+
+
+
+
+#description {
+  padding: 3%;
+  width: 100%;
+  line-height: 120%;
+  p {
+    font-family: 'Lato', Helvetica, sans-serif;
+    color: #000;
+    margin: 0 auto 0 auto;
+    max-width: 80vw;
+    font-size: 1.1em;
   }
 }
 
@@ -514,4 +509,62 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+/* New Article */
+
+.articles {
+  @media only screen and (max-width: 400px) {
+    width: 90%;
+    padding: 0px 3px 10px 3px;
+  }
+  width: 70%;
+  margin: auto;
+  min-height: 475px;
+  border: 1px solid #e3e3e3;
+  padding: 0px 20px 20px 20px;
+  overflow: auto;
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px 5px 5px #888888;
+
+  .article-form {
+    width: 100%;
+  }
+}
+
+/* Select tags */
+
+#tags-header {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.select-tags {
+  @media only screen and (max-width: 400px) {
+    width: 90%;
+    margin: auto;
+  }
+  width: 50%;
+  margin: auto;
+  padding: 3% 0%;
+
+  .tags-column {
+    width: 50%;
+    float: left;
+    padding-bottom: 7%;
+    @media only screen and (max-width: 720px) {
+      width: 100%;
+      margin: auto;
+    }
+
+    .mdl-checkbox__label {
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .column-one {
+    @media (max-width: 720px) {
+      padding-bottom: 0%;
+    }
+  }
+
 }

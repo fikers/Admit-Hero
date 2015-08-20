@@ -290,7 +290,7 @@ footer {
 
 /*homepage formats*/
 .title {
-  background: url('http://i.imgur.com/jcuOIuH.jpg') center / cover;
+  background: url('../assets/bg1a.jpg') center / cover;
   height: 650px;
   margin-top: 0px;
   color: white;
@@ -312,7 +312,7 @@ footer {
     }
     @media only screen and (max-width: 400px) {
     width: 80%;
-    font-size: 0.6em;
+    font-size: 1.5em;
     margin-left: auto;
     margin-right: auto;
     }
@@ -415,9 +415,18 @@ footer {
 }
 
 #fonter {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   margin-right: -25px;
   @media only screen and (min-width: 400px) {
     display:none;
+  }
+}
+
+pre {
+  background: none;
+  border: none;
+  span {
+  font-family: 'Montserrat';
+  text-wrap: break-word;
   }
 }
