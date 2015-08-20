@@ -1,0 +1,6 @@
+<%= link_to feedarticle.title, article_path(feedarticle) %><br>
+<%= feedarticle.description %><br>
+<% feedarticle.has_tags.each do |taglib| %>
+	<%= taglib.tag %>
+<% end %>
+	

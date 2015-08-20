@@ -4,15 +4,18 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!--<link rel="stylesheet" href="w3.css">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <% if logged_in? %>
 <div>
-	<p>Welcome to Admit Hero</p>
+
+	<% @articles.each do |article| %>
+		<div>
+			<%= render partial: "feedarticle", object: article %><br>
+		</div>
+		<br>
+	<% end %>
 </div>
-<p>tree</p>
-<%= link_to "Basic Information", basic_info_user_path(current_user) %>
-
-
 
 <% else %>
 
@@ -40,13 +43,14 @@
 <div class="w3-row w3-container wide">
     <div class="w3-half w3-container">
         <div class="words">
+		<h5>Find awesome content</h5>
 		<h5>Find awesome content written just for you</h5>
 		<p>Read articles on how to win the top scholarships, get into amazing summer programs, do well on standardized tests, and much, much more.</p>
 	    </div>
     </div>
     <div class="w3-half w3-container">
     	<div class="pic">
-        <img class="zp" src="http://i.imgur.com/Y5KsU5w.jpg">
+        <img class="zp" src="http://i.imgur.com/HecW3ni.jpg">
         </div>
     </div>
 </div>
@@ -56,7 +60,7 @@
 <div class="w3-row w3-container wide">
 	<div class="w3-half w3-container">
 		<div class="pic">
-        <img class="zp" src="http://i.imgur.com/i3BAM4B.jpg">
+        <img class="zp" src="http://i.imgur.com/eM7BPas.jpg">
         </div>
     </div>
     <div class="w3-half w3-container">
@@ -78,7 +82,7 @@
     </div>
     <div class="w3-half w3-container">
     	<div class="pic">
-        <img class="zp" src="http://i.imgur.com/vrekjPt.jpg">
+        <img class="zp" src="http://i.imgur.com/6LDUhQx.jpg">
         </div>
     </div>
 </div>
@@ -96,7 +100,7 @@
 <div class="w3-row w3-container">
     <div class="w3-third w3-container test">
         <div class="logos-testimonial">
-		<img class="profile" src="http://loremflickr.com/300/300/paris,travel" />
+		<img class="profile" src="http://i.imgur.com/BFwVA9y.jpg" />
 		<div class="quote">
 		<h6>Jane A.</h6>
 		<q>It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.</q>
@@ -109,7 +113,7 @@
     </div>
     <div class="w3-third w3-container test">
         <div class="logos-testimonial">
-		<img class="profile" src="http://loremflickr.com/300/300/paris,travel" />
+		<img class="profile" src="http://i.imgur.com/oeE037Q.jpg" />
 		<div class="quote">
 		<h6>Jane A.</h6>
 		<q>It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.</q>
@@ -122,7 +126,7 @@
     </div>
     <div class="w3-third w3-container test">
         <div class="logos-testimonial">
-		<img class="profile" src="http://loremflickr.com/300/300/paris,travel" />
+		<img class="profile" src="http://i.imgur.com/VMTnc94.jpg" />
 		<div class="quote">
 		<h6>Jane A.</h6>
 		<q>It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.</q>
