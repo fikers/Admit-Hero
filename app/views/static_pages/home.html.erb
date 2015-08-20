@@ -8,12 +8,14 @@
 
 <% if logged_in? %>
 <div>
-	<p>Welcome to Admit Hero</p>
+
+	<% @articles.each do |article| %>
+		<div>
+			<%= render partial: "feedarticle", object: article %><br>
+		</div>
+		<br>
+	<% end %>
 </div>
-<p>tree</p>
-<%= link_to "Basic Information", basic_info_user_path(current_user) %>
-
-
 
 <% else %>
 
