@@ -1,6 +1,19 @@
-<%= link_to feedarticle.title, article_path(feedarticle) %><br>
-<%= feedarticle.description %><br>
-<% feedarticle.has_tags.each do |taglib| %>
-	<%= taglib.tag %>
-<% end %>
+<div class="w3-card-2 feeditem">
+
+<div class="picc w3-col w3-container">
+<!--<img src="http://i2.cdn.turner.com/cnnnext/dam/assets/150522101756-06-duggar-family-exlarge-169.jpg">-->
+</div>    
+
+<div class="words">
+<div class="titler"><%= link_to feedarticle.title, article_path(feedarticle) %></div>
+<div class="description"><%= feedarticle.description %></div>
+
+<!--<span><% feedarticle.has_tags.each do |taglib| %>-->
+<!--	<%= taglib.tag %>-->
+<!--<% end %>-->
+<!--</span>-->
+
+<span class="timestamp">Posted <%= time_ago_in_words(feedarticle.created_at) %> ago</span>
 	
+</div>
+</div>

@@ -7,14 +7,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <% if logged_in? %>
-<div>
+<div class="w3-container homer">
+<div class="w3-quarter">
+	<h2>Welcome, <%= current_user.name %></h2>
+</div>
 
+<div class="w3-half">
+<div class="ya">
+	<h2>Your Articles for Today</h2>
+</div>
+<div>
 	<% @articles.each do |article| %>
 		<div>
 			<%= render partial: "feedarticle", object: article %><br>
 		</div>
 		<br>
 	<% end %>
+</div>
+</div>
 </div>
 
 <% else %>

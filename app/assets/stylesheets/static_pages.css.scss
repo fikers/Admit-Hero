@@ -436,3 +436,50 @@ pre {
   text-wrap: break-word;
   }
 }
+
+/* Logged in homepage with feed */
+
+.homer {
+  h2 {
+    text-align: center;
+  }
+}
+
+.ya {
+  h2 {
+    text-align: center;
+    @media screen and (max-width:400px) {
+      font-size: 1.8em;
+    }
+  }
+  border-bottom: 1px solid gray;
+  margin: 0px auto 10px auto;
+  width: 85%;
+}
+.feeditem {
+  .picc {
+    height: 50px;
+    width: 50px;
+    background: url("http://i2.cdn.turner.com/cnnnext/dam/assets/150522101756-06-duggar-family-exlarge-169.jpg") center/cover;
+    margin: 10px;
+  }
+  .words {
+  padding-left: 75px;
+  }
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;  
+  margin-bottom: -30px;
+  background-color: #E6EDFF;
+  .titler {
+    color: blue;
+    font-size: 1.25em;
+  }
+  .description {
+    
+  }
+  .timestamp {
+    color: gray;
+    
+  }
+}
