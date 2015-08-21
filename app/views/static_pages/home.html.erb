@@ -7,14 +7,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <% if logged_in? %>
-<div>
+<div class="w3-container homer">
+<div class="w3-quarter">
+	<h2>Welcome, <%= current_user.name %></h2>
+	<div>
+		<h5 style="text-align:center">Today's Featured Video</h5>
+		<iframe width="560" height="240" src="https://www.youtube.com/embed/APldJf0ctfY" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
 
+<div class="w3-half">
+<div class="ya">
+	<h2>Your Articles for Today</h2>
+</div>
+<div>
 	<% @articles.each do |article| %>
 		<div>
 			<%= render partial: "feedarticle", object: article %><br>
 		</div>
 		<br>
 	<% end %>
+</div>
+</div>
+
+<div class="w3-quarter w3-container rightpanel">
+	<iframe src="https://www.google.com/calendar/embed?src=iruc7jp4h4781lp1i66grg7s3s%40group.calendar.google.com&ctz=America/Chicago" style="border: 0" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+</div>
+
 </div>
 
 <% else %>
