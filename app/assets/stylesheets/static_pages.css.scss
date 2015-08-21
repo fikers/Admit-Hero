@@ -446,6 +446,11 @@ pre {
   h2 {
     text-align: center;
   }
+  .rightpanel {
+    @media screen and (max-width:400px) {
+      display: none;
+    }
+  }
 }
 
 .ya {
@@ -475,11 +480,14 @@ pre {
   margin-bottom: -30px;
   background-color: #E6EDFF;
   .titler {
-    color: blue;
+    color: #9C0909;
     font-size: 1.25em;
+    font-family: '';
+    border-bottom: 1px solid #CDCDCD;
+
   }
   .description {
-    
+    font-family:'Montserrat';
   }
   .timestamp {
     color: gray;
