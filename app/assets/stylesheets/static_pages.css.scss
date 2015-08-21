@@ -211,6 +211,9 @@
   color: black; }
   
 .profile {
+  @media only screen and (max-width:400px) {
+    max-width: 90%;
+  }
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -299,13 +302,19 @@ footer {
     padding-top: 200px;
   }
   .cent {
+    
     text-align: center;
     @media screen and (min-width: 400px) {
        font-size: 2.1em;
+       width:80%;
+    margin-left:auto;
+    margin-right:auto;
     }
   }
   .create-button {
-    width: 100%;
+    width: 60%;
+    margin-left:auto;
+    margin-right:auto;
     // height: 15%;
     @media screen and (min-width: 400px) {
        font-size: 2.0em;
@@ -317,7 +326,7 @@ footer {
     margin-right: auto;
     }
     background-color: #3d94f6;
-    border-radius: 1em;
+    border-radius: .3em;
     border: 0.1em solid #337fed;
     display: table;
     text-align: center;
@@ -427,6 +436,61 @@ pre {
   border: none;
   span {
   font-family: 'Montserrat';
-  text-wrap: break-word;
+  word-break: break-word;
+  }
+}
+
+/* Logged in homepage with feed */
+
+.homer {
+  h2 {
+    text-align: center;
+  }
+  .rightpanel {
+    @media screen and (max-width:400px) {
+      display: none;
+    }
+  }
+}
+
+.ya {
+  h2 {
+    text-align: center;
+    @media screen and (max-width:400px) {
+      font-size: 1.8em;
+    }
+  }
+  border-bottom: 1px solid gray;
+  margin: 0px auto 10px auto;
+  width: 85%;
+}
+.feeditem {
+  .picc {
+    height: 50px;
+    width: 50px;
+    background: url("http://i2.cdn.turner.com/cnnnext/dam/assets/150522101756-06-duggar-family-exlarge-169.jpg") center/cover;
+    margin: 10px;
+  }
+  .words {
+  padding-left: 75px;
+  }
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;  
+  margin-bottom: -30px;
+  background-color: #E6EDFF;
+  .titler {
+    color: #9C0909;
+    font-size: 1.25em;
+    font-family: '';
+    border-bottom: 1px solid #CDCDCD;
+
+  }
+  .description {
+    font-family:'Montserrat';
+  }
+  .timestamp {
+    color: gray;
+    
   }
 }

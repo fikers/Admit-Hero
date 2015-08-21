@@ -7,6 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <% if logged_in? %>
+<div class="w3-container homer">
+<div class="w3-quarter">
+	<h2>Welcome, <%= current_user.name %></h2>
+	<div>
+		<h5 style="text-align:center">Today's Featured Video</h5>
+		<iframe width="560" height="240" src="https://www.youtube.com/embed/APldJf0ctfY" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+<div class="w3-half">
+<div class="ya">
+	<h2>Your Articles for Today</h2>
+</div>
 <div>
 	<% @articles.each do |article| %>
 		<div>
@@ -15,6 +28,13 @@
 		<br>
 	<% end %>
 </div>
+</div>
+
+<div class="w3-quarter w3-container rightpanel">
+	<iframe src="https://www.google.com/calendar/embed?src=iruc7jp4h4781lp1i66grg7s3s%40group.calendar.google.com&ctz=America/Chicago" style="border: 0" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+</div>
+
+</div>
 
 <% else %>
 
@@ -22,10 +42,8 @@
 	<div class="w3-row cover">
 	<div class="w3-quarter"><p></p></div>
     <div class="w3-half">
-		<h3 class="cent" style="font-family:'Montserrat'; margin-bottom:-10px"> Get your own personalized feed </h3>
-		<h3 class="cent" style="font-family:'Montserrat'; margin-bottom:-10px"> of articles, scholarships, programs,</h3>
-		<h3 class="cent" style="font-family:'Montserrat'"> and much more</h3>
-		<button type="button" class="create-button" href="#">Take me on a Journey</a>
+		<h3 class="cent" style="font-family:'Montserrat'"> Get your own personalized feed of articles, scholarships, programs,and much more</h3>
+		<a type="button" class="create-button" href=signup>Take me on a Journey</a>
 	</div>
 	<div class="w3-quarter"><p></p></div>
 	</div>
@@ -44,7 +62,6 @@
 <div class="w3-row w3-container wide">
     <div class="w3-half w3-container">
         <div class="words">
-		<h5>Find awesome content</h5>
 		<h5>Find awesome content written just for you</h5>
 		<p>Read articles on how to win the top scholarships, get into amazing summer programs, do well on standardized tests, and much, much more.</p>
 	    </div>
